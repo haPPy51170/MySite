@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 
-def index_view(request):
-    return HttpResponse("<h1>Welcome to the home page! 🏠<h1>")
+def home_view(request):
+    return render(request,'home.html')
 
 def about_view(request):
-    return HttpResponse("<h1>Welcome to the about page! ℹ️<h1>")
+    return render(request,'about.html')
 
 def login_view(request):
-    return HttpResponse("<h1>Welcome to the login page! 🔐<h1>")
+    return render(request,'login.html')
 
 # Create your views here.
