@@ -1,13 +1,872 @@
-<!doctype html>
-<html lang="en">
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MyWeb | Profile</title>
+
+    <meta name="description"
+          content="Nebula Portfolio">
+
+    <meta name="theme-color"
+          content="#0f0b1d">
+
+    <!-- Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="{% static 'css/Rcss.css' %}">
+
 </head>
+
 <body>
 
+<div class="background">
+
+    <div class="aurora aurora-1"></div>
+
+    <div class="aurora aurora-2"></div>
+
+    <div class="grid"></div>
+
+    <div class="noise"></div>
+
+</div>
+
+<div class="progress-bar"></div>
+
+<div class="cursor"></div>
+
+<div class="cursor-dot"></div>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="#home"
+           class="logo">
+
+            <span>N</span>ebula
+
+        </a>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        خانه
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        درباره من
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills">
+                        مهارت‌ها
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        پروژه‌ها
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#blog">
+                        وبلاگ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        ارتباط
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button class="menu-btn">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="container hero-container">
+
+        <div class="hero-left">
+
+            <span class="hero-badge">
+
+                <i class="fa-solid fa-circle"></i>
+
+                در حال یادگیری و توسعه
+
+            </span>
+
+            <h1>
+
+                سلام،
+
+                <br>
+
+                به
+
+                <span>نبولا</span>
+
+                خوش اومدی.
+
+            </h1>
+
+            <h2>
+
+                <span class="typing"></span>
+
+            </h2>
+
+            <p class="hero-description">
+
+                این صفحه بعداً به رزومه و بلاگ شخصی تبدیل می‌شود.
+                فعلاً هدف، ساخت یک قالب حرفه‌ای برای تمرین
+                HTML، CSS، JavaScript و Django است.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="btn btn-primary">
+
+                    مشاهده پروژه‌ها
+
+                </a>
+
+                <a href="#contact"
+                   class="btn btn-secondary">
+
+                    ارتباط با من
+
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat-card">
+
+                    <h3>15+</h3>
+
+                    <p>پروژه</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>2+</h3>
+
+                    <p>سال یادگیری</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>∞</h3>
+
+                    <p>اشتیاق</p>
+
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="orb orb-1"></div>
+
+            <div class="orb orb-2"></div>
+
+            <div class="laptop">
+
+                <div class="screen">
+
+                    <div class="screen-top">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </div>
+
+                    <div class="editor">
+
+                        <div class="line w90"></div>
+
+                        <div class="line w70"></div>
+
+                        <div class="line w80"></div>
+
+                        <div class="line w55"></div>
+
+                        <div class="line w95"></div>
+
+                        <div class="line w60"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="base"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>درباره من</span>
+
+            <h2>شروع یک مسیر بزرگ</h2>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <div class="card-glow"></div>
+
+                <h3>
+
+                    <i class="fa-solid fa-user"></i>
+
+                    معرفی
+
+                </h3>
+
+                <p>
+
+                    این قسمت بعداً با اطلاعات واقعی تکمیل می‌شود.
+                    هدف فعلی ساخت یک قالب مدرن، تمیز و حرفه‌ای برای
+                    توسعه‌ی پروژه‌های Django است.
+
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <div class="card-glow"></div>
+
+                <h3>
+
+                    <i class="fa-solid fa-code"></i>
+
+                    برنامه‌نویسی
+
+                </h3>
+
+                <p>
+
+                    تمرکز اصلی روی Python،
+                    Django،
+                    HTML،
+                    CSS،
+                    JavaScript
+                    و ساخت پروژه‌های واقعی است.
+
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <div class="card-glow"></div>
+
+                <h3>
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    علاقه‌مندی
+
+                </h3>
+
+                <p>
+
+                    یادگیری عمیق،
+                    طراحی رابط کاربری،
+                    توسعه وب،
+                    انیمه،
+                    مطالعه،
+                    و ساخت محصولات باکیفیت.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="skills" id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>مهارت‌ها</span>
+
+            <h2>مسیر یادگیری</h2>
+
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-box">
+
+                <h4>HTML</h4>
+
+                <div class="skill-bar">
+
+                    <span style="width:85%"></span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h4>CSS</h4>
+
+                <div class="skill-bar">
+
+                    <span style="width:80%"></span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h4>JavaScript</h4>
+
+                <div class="skill-bar">
+
+                    <span style="width:60%"></span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h4>Python</h4>
+
+                <div class="skill-bar">
+
+                    <span style="width:75%"></span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h4>Django</h4>
+
+                <div class="skill-bar">
+
+                    <span style="width:55%"></span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h4>Git</h4>
+
+                <div class="skill-bar">
+
+                    <span style="width:65%"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>پروژه‌ها</span>
+
+            <h2>نمونه کارها</h2>
+
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <div class="project-overlay"></div>
+
+                    <span class="project-tag">
+                        Django
+                    </span>
+
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+
+                        پنل مدیریت محتوا
+
+                    </h3>
+
+                    <p>
+
+                        پروژه‌ای نمونه برای مدیریت محتوا با Django،
+                        احراز هویت، پنل مدیریت و رابط کاربری مدرن.
+
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+
+                        مشاهده پروژه
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <div class="project-overlay"></div>
+
+                    <span class="project-tag">
+                        Python
+                    </span>
+
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+
+                        ابزارهای پایتون
+
+                    </h3>
+
+                    <p>
+
+                        مجموعه‌ای از ابزارهای کوچک و کاربردی برای
+                        خودکارسازی کارها و تمرین برنامه‌نویسی.
+
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+
+                        مشاهده پروژه
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <div class="project-overlay"></div>
+
+                    <span class="project-tag">
+                        Front-End
+                    </span>
+
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+
+                        رابط کاربری مدرن
+
+                    </h3>
+
+                    <p>
+
+                        مجموعه‌ای از صفحات واکنش‌گرا با
+                        HTML،
+                        CSS
+                        و JavaScript.
+
+                    </p>
+
+                    <a href="#"
+                       class="project-link">
+
+                        مشاهده پروژه
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="blog" id="blog">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>وبلاگ</span>
+
+            <h2>آخرین نوشته‌ها</h2>
+
+        </div>
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+
+                <span class="blog-date">
+
+                    ۱۴۰۵
+
+                </span>
+
+                <h3>
+
+                    شروع مسیر یادگیری Django
+
+                </h3>
+
+                <p>
+
+                    تجربه‌ها، چالش‌ها و چیزهایی که هنگام ساخت
+                    اولین پروژه‌های واقعی یاد گرفتم.
+
+                </p>
+
+            </article>
+
+            <article class="blog-card">
+
+                <span class="blog-date">
+
+                    ۱۴۰۵
+
+                </span>
+
+                <h3>
+
+                    طراحی رابط کاربری مدرن
+
+                </h3>
+
+                <p>
+
+                    نکاتی درباره رنگ‌بندی،
+                    تایپوگرافی،
+                    انیمیشن‌ها و تجربه کاربری.
+
+                </p>
+
+            </article>
+
+            <article class="blog-card">
+
+                <span class="blog-date">
+
+                    ۱۴۰۵
+
+                </span>
+
+                <h3>
+
+                    برنامه‌نویسی بهتر
+
+                </h3>
+
+                <p>
+
+                    روش‌هایی برای نوشتن کدهای تمیز،
+                    قابل توسعه و قابل نگهداری.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>ارتباط</span>
+
+            <h2>با من در تماس باش</h2>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <h4>ایمیل</h4>
+
+                        <p>example@email.com</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <div>
+
+                        <h4>GitHub</h4>
+
+                        <p>github.com/username</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    <div>
+
+                        <h4>LinkedIn</h4>
+
+                        <p>linkedin.com/in/username</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <form class="contact-form">
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        placeholder="نام">
+
+                </div>
+
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        placeholder="ایمیل">
+
+                </div>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        placeholder="موضوع">
+
+                </div>
+
+                <div class="input-group">
+
+                    <textarea
+                        rows="7"
+                        placeholder="پیام شما"></textarea>
+
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    type="submit">
+
+                    ارسال پیام
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <div class="footer-left">
+
+            <a href="#home"
+               class="logo">
+
+                <span>N</span>ebula
+
+            </a>
+
+            <p>
+
+                طراحی شده برای تبدیل شدن به
+                یک رزومه و وبلاگ شخصی حرفه‌ای
+                با Django.
+
+            </p>
+
+        </div>
+
+        <div class="footer-center">
+
+            <a href="#home">خانه</a>
+
+            <a href="#about">درباره من</a>
+
+            <a href="#skills">مهارت‌ها</a>
+
+            <a href="#projects">پروژه‌ها</a>
+
+            <a href="#blog">وبلاگ</a>
+
+            <a href="#contact">ارتباط</a>
+
+        </div>
+
+        <div class="footer-right">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="{% static 'js/Rapp.js' %}"></script>
+
 </body>
+
 </html>
+

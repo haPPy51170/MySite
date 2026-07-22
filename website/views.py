@@ -10,4 +10,6 @@ def about_view(request):
 def login_view(request):
     return render(request,'login.html')
 
+def web_view(request):
+    return render(request,'index.html')
 # Create your views here.
