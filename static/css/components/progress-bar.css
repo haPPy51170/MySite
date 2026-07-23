@@ -1,0 +1,29 @@
+/*==============================
+PROGRESS BAR
+==============================*/
+
+.progress-bar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    z-index:999999;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    var(--primary),
+
+    var(--secondary));
+
+}

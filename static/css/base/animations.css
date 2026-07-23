@@ -1,0 +1,149 @@
+/*==============================
+ANIMATIONS
+==============================*/
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes typing{
+
+    0%,100%{
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes laptopFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+@keyframes orb1{
+
+    0%,100%{
+
+        transform:translate(-40px,-20px);
+
+    }
+
+    50%{
+
+        transform:translate(40px,30px);
+
+    }
+
+}
+
+@keyframes orb2{
+
+    0%,100%{
+
+        transform:translate(25px,15px);
+
+    }
+
+    50%{
+
+        transform:translate(-35px,-25px);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(55px);
+
+    }
+
+}
+
+@keyframes scroll{
+
+    0%{
+
+        top:10px;
+
+        opacity:0;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        top:32px;
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.7;
+
+    }
+
+    50%{
+
+        transform:scale(1.1);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes grow{
+
+    from{
+
+        width:0;
+
+    }
+
+}

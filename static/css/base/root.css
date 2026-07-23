@@ -1,0 +1,35 @@
+/*==============================
+ROOT
+==============================*/
+
+:root{
+
+    --bg:#09090b;
+    --bg-light:#101018;
+
+    --surface:#151520;
+    --surface-light:#1d1d2b;
+
+    --primary:#8b5cf6;
+    --primary-light:#a855f7;
+
+    --secondary:#facc15;
+
+    --text:#f8fafc;
+    --muted:#9ca3af;
+
+    --border:rgba(255,255,255,.08);
+
+    --success:#22c55e;
+    --danger:#ef4444;
+
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+
+    --radius:22px;
+
+    --transition:.35s ease;
+
+    --container:1240px;
+
+}
+

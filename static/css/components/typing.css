@@ -1,0 +1,23 @@
+/*==============================
+TYPING
+==============================*/
+
+.typing{
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    position:relative;
+
+}
+
+.typing::after{
+
+    content:"|";
+
+    margin-right:4px;
+
+    animation:blink .8s infinite;
+
+}

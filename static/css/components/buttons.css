@@ -1,0 +1,58 @@
+/*==============================
+BUTTONS
+==============================*/
+
+.btn{
+
+    padding:15px 34px;
+
+    border-radius:100px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    color:#fff;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light));
+
+    box-shadow:
+
+    0 0 45px rgba(139,92,246,.35);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 15px 40px rgba(139,92,246,.45);
+
+}
+
+.btn-secondary{
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+}
+
+.btn-secondary:hover{
+
+    border-color:var(--secondary);
+
+    color:var(--secondary);
+
+}

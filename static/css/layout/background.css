@@ -1,0 +1,91 @@
+/*==============================
+BACKGROUND
+==============================*/
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-999;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#191327 0%,transparent 45%),
+    radial-gradient(circle at bottom,#2d2206 0%,transparent 40%),
+    var(--bg);
+
+}
+
+.grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    opacity:.18;
+
+}
+
+.noise{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.04;
+
+    background-image:
+    radial-gradient(#ffffff 1px,transparent 1px);
+
+    background-size:12px 12px;
+
+}
+
+.aurora{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    animation:float 16s ease-in-out infinite;
+
+}
+
+.aurora-1{
+
+    background:#7c3aed;
+
+    top:-260px;
+
+    right:-180px;
+
+}
+
+.aurora-2{
+
+    background:#facc15;
+
+    left:-220px;
+
+    bottom:-260px;
+
+    animation-delay:6s;
+
+}

@@ -1,0 +1,45 @@
+/*==============================
+HEADER
+==============================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(9,9,11,.55);
+
+    border-bottom:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.header.scrolled{
+
+    background:#11111b;
+
+    box-shadow:var(--shadow);
+
+}
+
+.header .container{
+
+    height:82px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
