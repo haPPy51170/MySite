@@ -74,47 +74,25 @@
         </a>
 
         <nav class="navbar">
-
             <ul>
 
-                <li>
-                    <a href="#home">
-                        خانه
-                    </a>
-                </li>
+                <a href="{% url 'home' %}">خانه</a>
 
-                <li>
-                    <a href="#about">
-                        درباره من
-                    </a>
-                </li>
+                <a href="{% url 'home' %}#about">درباره من</a>
 
-                <li>
-                    <a href="#skills">
-                        مهارت‌ها
-                    </a>
-                </li>
+                <a href="{% url 'home' %}#skills">مهارت‌ها</a>
 
-                <li>
-                    <a href="#projects">
-                        پروژه‌ها
-                    </a>
-                </li>
+                <a href="{% url 'home' %}#projects">پروژه‌ها</a>
 
-                <li>
-                    <a href="#blog">
-                        وبلاگ
-                    </a>
-                </li>
+                <a href="{% url 'home' %}#blog">وبلاگ</a>
 
-                <li>
-                    <a href="#contact">
-                        ارتباط
-                    </a>
+                <a href="{% url 'home' %}#contact">ارتباط</a>
+
+                <li class="nav-login">
+                    <a href="{% url 'login' %}">ورود</a>
                 </li>
 
             </ul>
-
         </nav>
 
         <button class="menu-btn">
@@ -157,41 +135,47 @@
 
         </div>
 
-        <div class="footer-center">
+        <ul>
 
-            <a href="#home">خانه</a>
+            <li><a href="{% url 'home' %}">خانه</a></li>
 
-            <a href="#about">درباره من</a>
+            <li><a href="{% url 'home' %}#about">درباره من</a></li>
 
-            <a href="#skills">مهارت‌ها</a>
+            <li><a href="{% url 'home' %}#skills">مهارت‌ها</a></li>
 
-            <a href="#projects">پروژه‌ها</a>
+            <li><a href="{% url 'home' %}#projects">پروژه‌ها</a></li>
 
-            <a href="#blog">وبلاگ</a>
+            <li><a href="{% url 'home' %}#blog">وبلاگ</a></li>
 
-            <a href="#contact">ارتباط</a>
+            <li><a href="{% url 'home' %}#contact">ارتباط</a></li>
 
-        </div>
+            <li class="nav-login">
+                <a href="{% url 'login' %}">ورود</a>
+            </li>
 
-        <div class="footer-right">
+        </ul>
 
-            <a href="#">
-                <i class="fa-brands fa-github"></i>
-            </a>
+    </div>
 
-            <a href="#">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+    <div class="footer-right">
 
-            <a href="#">
-                <i class="fa-brands fa-telegram"></i>
-            </a>
+        <a href="#">
+            <i class="fa-brands fa-github"></i>
+        </a>
 
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+        <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
 
-        </div>
+        <a href="#">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+    </div>
 
     </div>
 

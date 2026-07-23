@@ -1,18 +1,135 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>login</title>
-</head>
-<body>
-  <h1>Welcome to the login page! 🔐</h1>
+{% extends "base.html" %}
+{% block content %}
 
-  <p>
-    Please sign in to access your account and explore the available features.
-    Enter your credentials below to continue.
-  </p>
-</body>
-</html>
+<section class="login-page">
+
+    <div class="container">
+
+        <div class="login-wrapper">
+
+            <div class="login-left">
+
+                <span class="hero-badge">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    خوش اومدی
+
+                </span>
+
+                <h1>
+
+                    ورود به
+
+                    <span>Nebula</span>
+
+                </h1>
+
+                <p class="login-description">
+
+                    برای ادامه وارد حساب کاربری خود شوید.
+                    این صفحه فعلاً فقط برای تمرین Template Inheritance
+                    و چندصفحه‌ای کردن پروژه طراحی شده است.
+
+                </p>
+
+            </div>
+            <div class="login-right">
+
+                <div class="login-card">
+
+                    <h2>
+
+                        ورود به حساب
+
+                    </h2>
+
+                    <p>
+
+                        اطلاعات حساب خود را وارد کنید.
+
+                    </p>
+
+                    <form class="login-form">
+
+                        <div class="input-group">
+
+                            <label for="username">
+                                نام کاربری
+                            </label>
+
+                            <input
+                                    id="username"
+                                    type="text"
+                                    placeholder="Username">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label for="password">
+                                رمز عبور
+                            </label>
+
+                            <input
+                                    id="password"
+                                    type="password"
+                                    placeholder="Password">
+
+                        </div>
+
+                        <div class="login-options">
+
+                            <label class="remember-me">
+
+                                <input
+                                        type="checkbox">
+
+                                <span>
+            مرا به خاطر بسپار
+        </span>
+
+                            </label>
+
+                            <a href="#">
+
+                                رمز عبور را فراموش کرده‌ام
+
+                            </a>
+
+                        </div>
+
+                        <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                            ورود
+
+                        </button>
+
+                        <p class="login-register">
+
+                            حساب کاربری ندارید؟
+
+                            <a href="#">
+
+                                ثبت‌نام
+
+                            </a>
+
+                        </p>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
