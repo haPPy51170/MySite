@@ -7,8 +7,6 @@ class Profile(models.Model):
     bio = models.TextField()
     email = models.EmailField()
     # image
-    def __str__(self):
-        return f"{self.id}. {self.name}"
 
 class Skill(models.Model):
     name = models.CharField(max_length=100)
