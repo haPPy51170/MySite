@@ -206,17 +206,17 @@ class SocialLinkAdmin(admin.ModelAdmin):
 
     list_display = (
         "id",
-        "platform",
+        # "platform",
         "url",
         "icon",
     )
 
     search_fields = (
-        "platform",
+        # "platform",
     )
 
     list_filter = (
-        "platform",
+        # "platform",
     )
 
 

@@ -62,7 +62,7 @@ class ContactMessage(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 class SocialLink(models.Model):
-    platform = models.CharField(max_length=100)
+    # platform = models.CharField(max_length=100)
     url = models.URLField()
     icon = models.CharField(max_length=100)
 
