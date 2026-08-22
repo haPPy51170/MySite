@@ -2,17 +2,16 @@
                 NEBULA PORTFOLIO
                 app.js
 ==================================================*/
-
+console.log("🔥 Rapp.js loaded");
 /*==============================
 TYPING EFFECT
 ==============================*/
 
-const words = [
-    "Backend Developer",
-    "Django Developer",
-    "Python Programmer",
-    "Problem Solver"
-];
+const words = JSON.parse(
+    document.getElementById("headlines-data").textContent
+);
+
+console.log(words);
 
 let wordIndex = 0;
 let letterIndex = 0;
