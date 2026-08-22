@@ -1,15 +1,6 @@
 from django.contrib import admin
 
-from website.models import (
-    Profile,
-    AboutCard,
-    Headline,
-    Skill,
-    Project,
-    BlogPost,
-    ContactMessage,
-    SocialLink,
-)
+from website.models import *
 
 
 class ProfileAdmin(admin.ModelAdmin):
@@ -78,6 +69,27 @@ class HeadlineAdmin(admin.ModelAdmin):
         "order",
     )
 
+class StatAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "id",
+        "value",
+        "label",
+        "order",
+    )
+
+    search_fields = (
+        "value",
+        "label",
+    )
+
+    ordering = (
+        "order",
+    )
+
+    list_editable = (
+        "order",
+    )
 
 class AboutCardAdmin(admin.ModelAdmin):
 
@@ -216,3 +228,4 @@ admin.site.register(Project, ProjectAdmin)
 admin.site.register(BlogPost, BlogPostAdmin)
 admin.site.register(ContactMessage, ContactMessageAdmin)
 admin.site.register(SocialLink, SocialLinkAdmin)
+admin.site.register(Stat, StatAdmin)

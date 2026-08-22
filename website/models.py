@@ -21,6 +21,11 @@ class Headline(models.Model):
     text = models.CharField(max_length=200)
     order = models.IntegerField(default=0)
 
+class Stat(models.Model):
+    value = models.CharField(max_length=20)
+    label = models.CharField(max_length=100)
+    order = models.PositiveIntegerField(default=0)
+
 class AboutCard(models.Model):
     icon = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
