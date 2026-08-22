@@ -216,129 +216,48 @@
 
         <div class="projects-grid">
 
-            <article class="project-card">
+    {% for project in projects %}
 
-                <div class="project-image">
+        <article class="project-card">
 
-                    <div class="project-overlay"></div>
+            <div class="project-image">
 
-                    <span class="project-tag">
-                        Django
-                    </span>
+                <div class="project-overlay"></div>
 
-                </div>
+                <span class="project-tag">
+                    {{ project.tag }}
+                </span>
 
-                <div class="project-content">
+            </div>
 
-                    <h3>
+            <div class="project-content">
 
-                        پنل مدیریت محتوا
+                <h3>
+                    {{ project.title }}
+                </h3>
 
-                    </h3>
+                <p>
+                    {{ project.description }}
+                </p>
 
-                    <p>
+                <a href="{{ project.url }}"
+                   class="project-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
 
-                        پروژه‌ای نمونه برای مدیریت محتوا با Django،
-                        احراز هویت، پنل مدیریت و رابط کاربری مدرن.
+                    مشاهده پروژه
 
-                    </p>
+                    <i class="fa-solid fa-arrow-left"></i>
 
-                    <a href="#"
-                       class="project-link">
+                </a>
 
-                        مشاهده پروژه
+            </div>
 
-                        <i class="fa-solid fa-arrow-left"></i>
+        </article>
 
-                    </a>
+    {% endfor %}
 
-                </div>
-
-            </article>
-
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <div class="project-overlay"></div>
-
-                    <span class="project-tag">
-                        Python
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-
-                        ابزارهای پایتون
-
-                    </h3>
-
-                    <p>
-
-                        مجموعه‌ای از ابزارهای کوچک و کاربردی برای
-                        خودکارسازی کارها و تمرین برنامه‌نویسی.
-
-                    </p>
-
-                    <a href="#"
-                       class="project-link">
-
-                        مشاهده پروژه
-
-                        <i class="fa-solid fa-arrow-left"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <div class="project-overlay"></div>
-
-                    <span class="project-tag">
-                        Front-End
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-
-                        رابط کاربری مدرن
-
-                    </h3>
-
-                    <p>
-
-                        مجموعه‌ای از صفحات واکنش‌گرا با
-                        HTML،
-                        CSS
-                        و JavaScript.
-
-                    </p>
-
-                    <a href="#"
-                       class="project-link">
-
-                        مشاهده پروژه
-
-                        <i class="fa-solid fa-arrow-left"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
+</div>
 
     </div>
 
