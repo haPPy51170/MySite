@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load jformat %}
+
 {% block content %}
 
 <section class="hero" id="home">
 
     <div class="container hero-container">
-
         <div class="hero-left">
 
             <span class="hero-badge">
@@ -277,77 +278,31 @@
 
         <div class="blog-grid">
 
-            <article class="blog-card">
+    {% for blogpost in blogposts %}
 
-                <span class="blog-date">
+        <article class="blog-card">
 
-                    ۱۴۰۵
+            <span class="blog-date">
+                {{ blogpost.published_at|jformat:"%Y/%m/%d" }}
+            </span>
 
-                </span>
+            <h3>
+                {{ blogpost.title }}
+            </h3>
 
-                <h3>
+            <p>
+                {{ blogpost.description }}
+            </p>
 
-                    شروع مسیر یادگیری Django
+        </article>
 
-                </h3>
+    {% empty %}
 
-                <p>
+        <p>هنوز پستی منتشر نشده است.</p>
 
-                    تجربه‌ها، چالش‌ها و چیزهایی که هنگام ساخت
-                    اولین پروژه‌های واقعی یاد گرفتم.
+    {% endfor %}
 
-                </p>
-
-            </article>
-
-            <article class="blog-card">
-
-                <span class="blog-date">
-
-                    ۱۴۰۵
-
-                </span>
-
-                <h3>
-
-                    طراحی رابط کاربری مدرن
-
-                </h3>
-
-                <p>
-
-                    نکاتی درباره رنگ‌بندی،
-                    تایپوگرافی،
-                    انیمیشن‌ها و تجربه کاربری.
-
-                </p>
-
-            </article>
-
-            <article class="blog-card">
-
-                <span class="blog-date">
-
-                    ۱۴۰۵
-
-                </span>
-
-                <h3>
-
-                    برنامه‌نویسی بهتر
-
-                </h3>
-
-                <p>
-
-                    روش‌هایی برای نوشتن کدهای تمیز،
-                    قابل توسعه و قابل نگهداری.
-
-                </p>
-
-            </article>
-
-        </div>
+</div>
 
     </div>
 

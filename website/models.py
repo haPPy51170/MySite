@@ -50,9 +50,9 @@ class Project(models.Model):
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=100)
-    content = models.TextField()
-    excerpt = models.TextField()
-    published_at = models.DateTimeField()
+    # content = models.TextField()
+    description = models.TextField()
+    published_at = models.DateTimeField(auto_now_add=True)
 
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
