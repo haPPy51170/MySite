@@ -1,6 +1,7 @@
-from django.shortcuts import render
 from website.models import *
 from .forms import ContactForm
+from django.contrib import messages
+from django.shortcuts import render, redirect
 
 
 def home_view(request):
@@ -9,7 +10,8 @@ def home_view(request):
 
         if form.is_valid():
             form.save()
-
+            messages.success(request, "پیام شما با موفقیت ارسال شد.")
+            return redirect("website:home")
     else:
         form = ContactForm()
 
