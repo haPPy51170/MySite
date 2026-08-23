@@ -2,7 +2,7 @@ from website.models import *
 from .forms import ContactForm
 from django.contrib import messages
 from django.shortcuts import render, redirect
-
+from django.urls import reverse
 
 def home_view(request):
     if request.method == "POST":
@@ -11,7 +11,7 @@ def home_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, "پیام شما با موفقیت ارسال شد.")
-            return redirect("website:home")
+            return redirect(reverse("website:home") + "#contact")
     else:
         form = ContactForm()
 
