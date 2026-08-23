@@ -368,46 +368,60 @@
 
             </div>
 
-            <form class="contact-form"
+<form class="contact-form"
       method="POST"
       action="{% url 'website:home' %}">
 
     {% csrf_token %}
 
     <div class="input-group">
-
         <input
             type="text"
             name="name"
-            placeholder="نام">
+            placeholder="نام"
+            value="{{ form.name.value|default:'' }}"
+        >
 
+        {% for error in form.name.errors %}
+            <small class="form-error">{{ error }}</small>
+        {% endfor %}
     </div>
 
     <div class="input-group">
-
         <input
             type="email"
             name="email"
-            placeholder="ایمیل">
+            placeholder="ایمیل"
+            value="{{ form.email.value|default:'' }}"
+        >
 
+        {% for error in form.email.errors %}
+            <small class="form-error">{{ error }}</small>
+        {% endfor %}
     </div>
 
     <div class="input-group">
-
         <input
             type="text"
             name="subject"
-            placeholder="موضوع">
+            placeholder="موضوع"
+            value="{{ form.subject.value|default:'' }}"
+        >
 
+        {% for error in form.subject.errors %}
+            <small class="form-error">{{ error }}</small>
+        {% endfor %}
     </div>
 
     <div class="input-group">
-
         <textarea
             name="message"
-            rows="7"
-            placeholder="پیام شما"></textarea>
+            placeholder="پیام"
+        >{{ form.message.value|default:'' }}</textarea>
 
+        {% for error in form.message.errors %}
+            <small class="form-error">{{ error }}</small>
+        {% endfor %}
     </div>
 
     <button

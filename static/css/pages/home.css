@@ -1011,3 +1011,10 @@ REVEAL ANIMATION
 }
 
 
+.form-error {
+    display: block;
+    margin-top: 6px;
+    color: #ef4444;
+    font-size: 13px;
+    line-height: 1.5;
+}

@@ -1,30 +1,24 @@
 from django.shortcuts import render
 from website.models import *
+from .forms import ContactForm
 
 
 def home_view(request):
     if request.method == "POST":
+        form = ContactForm(request.POST)
 
-        name = request.POST.get("name")
-        email = request.POST.get("email")
-        subject = request.POST.get("subject")
-        message = request.POST.get("message")
+        if form.is_valid():
+            form.save()
 
-        ContactMessage.objects.create(
-            name=name,
-            email=email,
-            subject=subject,
-            message=message,
-        )
+    else:
+        form = ContactForm()
 
     profile = Profile.objects.first()
-
     headlines = list(
         Headline.objects
         .order_by("order")
         .values_list("text", flat=True)
     )
-
     about_cards = AboutCard.objects.all().order_by("order")
     stats = Stat.objects.all().order_by("order")
     skills = Skill.objects.all()
@@ -41,6 +35,7 @@ def home_view(request):
         "projects": projects,
         "blogposts": blogposts,
         "sociallinks": sociallinks,
+        "form": form,
     }
 
     return render(request, "home.html", context)
