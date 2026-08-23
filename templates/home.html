@@ -368,50 +368,57 @@
 
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form"
+      method="POST"
+      action="{% url 'website:home' %}">
 
-                <div class="input-group">
+    {% csrf_token %}
 
-                    <input
-                        type="text"
-                        placeholder="نام">
+    <div class="input-group">
 
-                </div>
+        <input
+            type="text"
+            name="name"
+            placeholder="نام">
 
-                <div class="input-group">
+    </div>
 
-                    <input
-                        type="email"
-                        placeholder="ایمیل">
+    <div class="input-group">
 
-                </div>
+        <input
+            type="email"
+            name="email"
+            placeholder="ایمیل">
 
-                <div class="input-group">
+    </div>
 
-                    <input
-                        type="text"
-                        placeholder="موضوع">
+    <div class="input-group">
 
-                </div>
+        <input
+            type="text"
+            name="subject"
+            placeholder="موضوع">
 
-                <div class="input-group">
+    </div>
 
-                    <textarea
-                        rows="7"
-                        placeholder="پیام شما"></textarea>
+    <div class="input-group">
 
-                </div>
+        <textarea
+            name="message"
+            rows="7"
+            placeholder="پیام شما"></textarea>
 
-                <button
-                    class="btn btn-primary"
-                    type="submit">
+    </div>
 
-                    ارسال پیام
+    <button
+        class="btn btn-primary"
+        type="submit">
 
-                </button>
+        ارسال پیام
 
-            </form>
+    </button>
 
+</form>
         </div>
 
     </div>
