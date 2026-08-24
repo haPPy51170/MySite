@@ -24,6 +24,8 @@ class ProfileAdmin(admin.ModelAdmin):
         "status_fa",
         "status_en",
         "email",
+        "github",
+        "linkedin",
         "location",
         "created_at",
         "updated_at",
