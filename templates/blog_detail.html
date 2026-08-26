@@ -7,8 +7,7 @@
 
 <main class="blog-detail">
 
-    <a href="{% url 'website:blog_detail_by_slug' slug=blogpost.slug %}"
-   class="blog-card">
+    <article class="blog-post">
 
         <header class="blog-post__header">
 
@@ -32,7 +31,7 @@
             {{ blogpost.content|linebreaks }}
         </div>
 
-    </a>
+    </article>
 
 </main>
 
