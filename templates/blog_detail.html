@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ blogpost.title }}{% endblock %}
+
+{% block content %}
+
+<main class="blog-detail">
+
+    <article class="blog-post">
+
+        <header class="blog-post__header">
+
+            <h1 class="blog-post__title">
+                {{ blogpost.title }}
+            </h1>
+
+            <div class="blog-post__meta">
+                <span>
+                    {{ blogpost.published_at }}
+                </span>
+            </div>
+
+            <p class="blog-post__description">
+                {{ blogpost.description }}
+            </p>
+
+        </header>
+
+        <div class="blog-post__content">
+            {{ blogpost.content|linebreaks }}
+        </div>
+
+    </article>
+
+</main>
+
+{% endblock %}
