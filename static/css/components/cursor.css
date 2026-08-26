@@ -2,62 +2,86 @@
 CURSOR
 ==============================*/
 
-body{
+body {
 
-    cursor:none;
-
-}
-
-.cursor{
-    display: none;
-}
-
-.cursor-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--secondary);
-
-    position:fixed;
-    left:0;
-    top:0;
-    transform:translate(-50%,-50%);
-    pointer-events:none;
-    z-index:999999;
-}
-
-.cursor-dot{
-
-    width:8px;
-
-    height:8px;
-
-    background:var(--secondary);
-
-    border-radius:50%;
-
-    position:fixed;
-
-    left:0;
-
-    top:0;
-
-    transform:translate(-50%,-50%);
-
-    pointer-events:none;
-
-    z-index:999999;
+    cursor: none;
 
 }
 
-.cursor.hover{
 
-    width:64px;
+/*==============================
+MAIN CURSOR
+==============================*/
 
-    height:64px;
+.cursor {
 
-    background:rgba(139,92,246,.12);
+    width: 64px;
 
-    border-color:var(--primary);
+    height: 64px;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 50%;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    z-index: 999999;
+
+    transition:
+        width .2s ease,
+        height .2s ease,
+        background .2s ease;
+
+}
+
+
+/*==============================
+CURSOR DOT
+==============================*/
+
+.cursor-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    z-index: 1000000;
+
+}
+
+
+/*==============================
+HOVER
+==============================*/
+
+.cursor.hover {
+
+    width: 80px;
+
+    height: 80px;
+
+    background: rgba(139, 92, 246, .12);
 
 }

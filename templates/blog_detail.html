@@ -1,38 +1,35 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block title %}{{ blogpost.title }}{% endblock %}
 
 {% block content %}
 
-<main class="blog-detail">
+<section class="blog-detail-page">
 
-    <article class="blog-post">
+    <article class="blog-post-card">
 
-        <header class="blog-post__header">
+        <header class="blog-post-header">
 
-            <h1 class="blog-post__title">
+            <span class="blog-post-date">
+                {{ blogpost.published_at|jformat:"%Y/%m/%d" }}
+            </span>
+
+            <h1 class="blog-post-title">
                 {{ blogpost.title }}
             </h1>
 
-            <div class="blog-post__meta">
-                <span>
-                    {{ blogpost.published_at }}
-                </span>
-            </div>
-
-            <p class="blog-post__description">
+            <p class="blog-post-description">
                 {{ blogpost.description }}
             </p>
 
         </header>
 
-        <div class="blog-post__content">
+        <div class="blog-post-content">
             {{ blogpost.content|linebreaks }}
         </div>
 
     </article>
 
-</main>
+</section>
 
 {% endblock %}
