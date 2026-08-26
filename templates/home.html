@@ -293,7 +293,8 @@
 
             {% for blogpost in blogposts %}
 
-            <article class="blog-card">
+            <a href="{% url 'website:blog_detail_by_slug' slug=blogpost.slug %}"
+               class="blog-card">
 
                 <span class="blog-date">
 
@@ -313,7 +314,7 @@
 
                 </p>
 
-            </article>
+            </a>
 
             {% empty %}
 
