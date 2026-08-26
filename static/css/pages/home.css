@@ -774,6 +774,10 @@ BLOG
 
     transition:var(--transition);
 
+    color: inherit;
+
+    text-decoration: none;
+
 }
 
 .blog-card:hover{
