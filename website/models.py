@@ -49,10 +49,24 @@ class Project(models.Model):
     url = models.URLField()
 
 class BlogPost(models.Model):
-    title = models.CharField(max_length=100)
-    # content = models.TextField()
+    title = models.CharField(max_length=200)
+
+    slug = models.SlugField(
+        max_length=220,
+        unique=True,
+        allow_unicode=True
+    )
+
     description = models.TextField()
-    published_at = models.DateTimeField(auto_now_add=True)
+    content = models.TextField()
+
+    published_at = models.DateTimeField(
+        auto_now_add=True
+    )
+
+
+    def __str__(self):
+        return self.title
 
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)

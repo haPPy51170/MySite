@@ -41,9 +41,11 @@ PAGES
 @import url("pages/home.css");
 @import url("pages/login.css");
 
+/*==============================
+BLOG_DETAIL
+==============================*/
 
-
-
+@import url("pages/blog_detail.css");
 
 
 

@@ -3,6 +3,7 @@ from .forms import ContactForm
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.shortcuts import render, get_object_or_404
 
 def home_view(request):
     if request.method == "POST":
@@ -42,6 +43,27 @@ def home_view(request):
 
     return render(request, "home.html", context)
 
+def blog_detail(request, id=None, slug=None):
+
+    if id is not None:
+        blogpost = get_object_or_404(
+            BlogPost,
+            id=id
+        )
+
+    else:
+        blogpost = get_object_or_404(
+            BlogPost,
+            slug=slug
+        )
+
+    return render(
+        request,
+        "blog_detail.html",
+        {
+            "blogpost": blogpost
+        }
+    )
 
 def test(request):
     return render(request, "index.html")

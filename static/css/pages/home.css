@@ -1043,3 +1043,7 @@ REVEAL ANIMATION
     gap: 22px;
 
 }
+
+.info-card .fa-envelope {
+    font-size: 1.65rem;
+}

@@ -71,6 +71,7 @@ class HeadlineAdmin(admin.ModelAdmin):
         "order",
     )
 
+
 class StatAdmin(admin.ModelAdmin):
 
     list_display = (
@@ -92,6 +93,7 @@ class StatAdmin(admin.ModelAdmin):
     list_editable = (
         "order",
     )
+
 
 class AboutCardAdmin(admin.ModelAdmin):
 
@@ -164,13 +166,13 @@ class BlogPostAdmin(admin.ModelAdmin):
     list_display = (
         "id",
         "title",
+        "description",
         "published_at",
     )
 
     search_fields = (
         "title",
-        "content",
-        "excerpt",
+        "description",
     )
 
     ordering = (
@@ -208,17 +210,13 @@ class SocialLinkAdmin(admin.ModelAdmin):
 
     list_display = (
         "id",
-        # "platform",
         "url",
         "icon",
     )
 
     search_fields = (
-        # "platform",
-    )
-
-    list_filter = (
-        # "platform",
+        "url",
+        "icon",
     )
 
 
