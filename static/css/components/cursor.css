@@ -24,6 +24,8 @@ MAIN CURSOR
     z-index: 2147483647;
 
     overflow: visible;
+
+    isolation: isolate;
 }
 
 .cursor {
