@@ -12,6 +12,15 @@ body * {
 MAIN CURSOR
 ==============================*/
 
+#cursor-layer {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2147483647;
+}
+
 .cursor {
     width: 64px;
     height: 64px;
@@ -19,7 +28,8 @@ MAIN CURSOR
     border: 1px solid var(--primary);
     border-radius: 50%;
 
-    position: fixed;
+    position: absolute;
+
     left: 0;
     top: 0;
 
@@ -27,16 +37,13 @@ MAIN CURSOR
 
     pointer-events: none;
 
-    z-index: 2147483647;
-
-    will-change: left, top, width, height;
+    will-change: left, top;
 
     transition:
         width .2s ease,
         height .2s ease,
         background .2s ease;
 }
-
 
 /*==============================
 CURSOR DOT
@@ -49,15 +56,14 @@ CURSOR DOT
     border-radius: 50%;
     background: var(--secondary);
 
-    position: fixed;
+    position: absolute;
+
     left: 0;
     top: 0;
 
     transform: translate(-50%, -50%);
 
     pointer-events: none;
-
-    z-index: 2147483647;
 
     will-change: left, top;
 }
