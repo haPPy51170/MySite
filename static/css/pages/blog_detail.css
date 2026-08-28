@@ -1,26 +1,14 @@
-/*==============================
-BLOG DETAIL
-==============================*/
-
 .blog-detail-page {
-
     width: 100%;
     padding: 100px 20px;
     box-sizing: border-box;
-
 }
 
-
-/*==============================
-BLOG POST CARD
-==============================*/
-
 .blog-post-card {
-
     position: relative;
     overflow: hidden;
 
-    width: min(900px, 100%);
+    width: min(950px, 100%);
     margin: 0 auto;
 
     padding: 45px;
@@ -36,142 +24,96 @@ BLOG POST CARD
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.15);
+    transition: .35s;
 
+    box-shadow:
+        0 18px 45px rgba(139,92,246,.12);
 }
 
+.blog-post-card::before {
+    content: "";
 
-/*==============================
-DATE
-==============================*/
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139,92,246,.08),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+.blog-post-header {
+    position: relative;
+    z-index: 1;
+
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
 
 .blog-post-date {
-
     display: inline-block;
 
     padding: 8px 16px;
-
     margin-bottom: 20px;
 
     border-radius: 100px;
 
     background: rgba(250,204,21,.10);
-
     border: 1px solid rgba(250,204,21,.20);
 
     color: var(--secondary);
 
     font-size: .9rem;
-
     font-weight: 700;
-
 }
 
-
-/*==============================
-TITLE
-==============================*/
-
 .blog-post-title {
-
     margin-bottom: 20px;
 
     font-size: 2.7rem;
-
     line-height: 1.4;
-
 }
 
-
-/*==============================
-DESCRIPTION
-==============================*/
-
 .blog-post-description {
-
     color: var(--muted);
 
     font-size: 1.05rem;
-
     line-height: 2;
-
-    margin-bottom: 0;
-
 }
-
-
-/*==============================
-HEADER
-==============================*/
-
-.blog-post-header {
-
-    padding-bottom: 35px;
-
-    margin-bottom: 35px;
-
-    border-bottom: 1px solid rgba(255,255,255,.08);
-
-}
-
-
-/*==============================
-CONTENT
-==============================*/
 
 .blog-post-content {
+    position: relative;
+    z-index: 1;
 
     color: #fff;
 
     font-size: 1.05rem;
-
     line-height: 2.3;
-
 }
-
-
-/*==============================
-CONTENT PARAGRAPHS
-==============================*/
 
 .blog-post-content p {
-
     margin-bottom: 28px;
-
 }
-
-
-/*==============================
-MOBILE
-==============================*/
 
 @media (max-width: 768px) {
 
     .blog-detail-page {
-
         padding: 70px 15px;
-
     }
 
     .blog-post-card {
-
         padding: 30px 22px;
-
     }
 
     .blog-post-title {
-
         font-size: 2rem;
-
-    }
-
-    .blog-post-content {
-
-        font-size: 1rem;
-
-        line-height: 2.1;
-
     }
 
 }

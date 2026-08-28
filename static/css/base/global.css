@@ -1,47 +1,36 @@
-/*==============================
-GLOBAL
-==============================*/
+{% extends "base.html" %}
+{% load jformat %}
 
-.container{
+{% block title %}{{ blogpost.title }}{% endblock %}
 
-    width:min(92%,var(--container));
+{% block content %}
 
-    margin:auto;
+<div class="blog-detail-page">
 
-}
+    <article class="blog-post-card">
 
-section{
+        <header class="blog-post-header">
 
-    padding:130px 0;
+            <span class="blog-post-date">
+                {{ blogpost.published_at|jformat:"%Y/%m/%d" }}
+            </span>
 
-}
+            <h1 class="blog-post-title">
+                {{ blogpost.title }}
+            </h1>
 
-.section-title{
+            <p class="blog-post-description">
+                {{ blogpost.description }}
+            </p>
 
-    text-align:center;
+        </header>
 
-    margin-bottom:70px;
+        <div class="blog-post-content">
+            {{ blogpost.content|linebreaks }}
+        </div>
 
-}
+    </article>
 
-.section-title span{
+</div>
 
-    color:var(--secondary);
-
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    display:inline-block;
-
-    margin-bottom:12px;
-
-}
-
-.section-title h2{
-
-    font-size:2.7rem;
-
-    font-weight:800;
-
-}
+{% endblock %}

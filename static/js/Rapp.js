@@ -7,63 +7,71 @@ console.log("🔥 Rapp.js loaded");
 TYPING EFFECT
 ==============================*/
 
-const words = JSON.parse(
-    document.getElementById("headlines-data").textContent
-);
-
-console.log(words);
-
-let wordIndex = 0;
-let letterIndex = 0;
-let deleting = false;
-
+const headlinesData = document.getElementById("headlines-data");
 const typing = document.querySelector(".typing");
 
-function typeEffect() {
+if (headlinesData && typing) {
 
-    if (!typing) return;
+    const words = JSON.parse(headlinesData.textContent);
 
-    const currentWord = words[wordIndex];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let deleting = false;
 
-    if (!deleting) {
+    function typeEffect() {
 
-        typing.textContent = currentWord.substring(0, letterIndex++);
+        const currentWord = words[wordIndex];
 
-        if (letterIndex > currentWord.length) {
+        if (!deleting) {
 
-            deleting = true;
+            typing.textContent = currentWord.substring(
+                0,
+                letterIndex++
+            );
 
-            setTimeout(typeEffect, 1600);
+            if (letterIndex > currentWord.length) {
 
-            return;
+                deleting = true;
 
-        }
+                setTimeout(typeEffect, 1600);
 
-    } else {
+                return;
 
-        typing.textContent = currentWord.substring(0, letterIndex--);
+            }
 
-        if (letterIndex < 0) {
+        } else {
 
-            deleting = false;
+            typing.textContent = currentWord.substring(
+                0,
+                letterIndex--
+            );
 
-            wordIndex++;
+            if (letterIndex < 0) {
 
-            if (wordIndex >= words.length) {
+                deleting = false;
 
-                wordIndex = 0;
+                wordIndex++;
+
+                if (wordIndex >= words.length) {
+
+                    wordIndex = 0;
+
+                }
 
             }
 
         }
 
+        setTimeout(
+            typeEffect,
+            deleting ? 45 : 90
+        );
+
     }
 
-    setTimeout(typeEffect, deleting ? 45 : 90);
+    typeEffect();
 
 }
-
-typeEffect();
 
 
 /*==============================
