@@ -2,10 +2,9 @@
 CURSOR
 ==============================*/
 
-body {
-
+body,
+body * {
     cursor: none;
-
 }
 
 

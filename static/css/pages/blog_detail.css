@@ -5,8 +5,7 @@
 }
 
 .blog-post-card {
-    position: relative;
-    overflow: hidden;
+    overflow: visible;
 
     width: min(950px, 100%);
     margin: 0 auto;
