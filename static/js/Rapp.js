@@ -74,44 +74,6 @@ if (headlinesData && typing) {
 }
 
 
-/*==============================
-CUSTOM CURSOR
-==============================*/
-
-const cursor = document.querySelector(".cursor");
-const dot = document.querySelector(".cursor-dot");
-
-if (cursor && dot) {
-
-    document.addEventListener("mousemove", e => {
-
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-
-        dot.style.left = e.clientX + "px";
-        dot.style.top = e.clientY + "px";
-
-    });
-
-    document.querySelectorAll("a,button,.btn,.project-card,.blog-card,.about-card,.skill-box")
-        .forEach(item => {
-
-            item.addEventListener("mouseenter", () => {
-
-                cursor.classList.add("hover");
-
-            });
-
-            item.addEventListener("mouseleave", () => {
-
-                cursor.classList.remove("hover");
-
-            });
-
-        });
-
-}
-
 
 /*==============================
 SCROLL PROGRESS
