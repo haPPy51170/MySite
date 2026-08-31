@@ -148,6 +148,7 @@ class ProjectAdmin(admin.ModelAdmin):
         "tag",
         "url",
         "description",
+        "image",
     )
 
     search_fields = (

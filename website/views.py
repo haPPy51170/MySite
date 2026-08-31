@@ -65,5 +65,3 @@ def blog_detail(request, id=None, slug=None):
         }
     )
 
-def test(request):
-    return render(request, "index.html")

@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+
 # Create your models here.
+
+
 class Profile(models.Model):
     name_fa = models.CharField(max_length=50)
     name_en = models.CharField(max_length=50)
@@ -44,7 +47,7 @@ class Skill(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    # image
+    image = models.ImageField(upload_to='images/', default='images/default_image.jpg')
     tag = models.CharField(max_length=100)
     url = models.URLField()
 
