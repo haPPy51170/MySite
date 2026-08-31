@@ -1,4 +1,3 @@
-```html
 {% load static %}
 
 <!DOCTYPE html>
@@ -8,144 +7,171 @@
 
     <meta charset="UTF-8">
 
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>
-        {% block title %}
-            Nebula Portfolio
-        {% endblock %}
-    </title>
+    <title>MyWeb | Profile</title>
 
-    <!-- Font Awesome -->
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description"
+          content="Nebula Portfolio">
 
-    <!-- Main CSS -->
-    <link
-            rel="stylesheet"
-            href="{% static 'css/style.css' %}">
+    <meta name="theme-color"
+          content="#0f0b1d">
 
-    {% block extra_css %}
-    {% endblock %}
+    <!-- Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
 
 </head>
 
 <body>
 
-    <!-- Background -->
-    <div class="background">
+<div class="background">
 
-        <div class="background-orb orb-1"></div>
-        <div class="background-orb orb-2"></div>
-        <div class="background-orb orb-3"></div>
+    <div class="aurora aurora-1"></div>
+
+    <div class="aurora aurora-2"></div>
+
+    <div class="grid"></div>
+
+    <div class="noise"></div>
+
+</div>
+
+<div class="progress-bar"></div>
+
+<div class="cursor"></div>
+
+<div class="cursor-dot"></div>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="#home"
+           class="logo">
+
+            <span>N</span>ebula
+
+        </a>
+
+        <nav class="navbar">
+            <ul>
+
+                <a href="{% url 'website:home' %}">خانه</a>
+
+                <a href="{% url 'website:home' %}#about">درباره من</a>
+
+                <a href="{% url 'website:home' %}#skills">مهارت‌ها</a>
+
+                <a href="{% url 'website:home' %}#projects">پروژه‌ها</a>
+
+                <a href="{% url 'website:home' %}#blog">وبلاگ</a>
+
+                <a href="{% url 'website:home' %}#contact">ارتباط</a>
+
+                <li class="nav-login">
+                    <a href="{% url 'login:login' %}">ورود</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <button class="menu-btn">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
 
     </div>
 
+</header>
 
-    <!-- Custom Cursor -->
-    <div id="cursor-layer">
-
-        <div class="cursor"></div>
-
-        <div class="cursor-dot"></div>
-
-    </div>
-
-
-    <!-- Header -->
-    <header class="header">
-
-        <div class="container">
-
-            <nav class="navbar">
-
-                <a
-                        href="/"
-                        class="logo">
-
-                    <span>N</span>ebula
-
-                </a>
-
-
-                <div class="nav-links">
-
-                    <a href="/">
-                        خانه
-                    </a>
-
-                    <a href="/#about">
-                        درباره من
-                    </a>
-
-                    <a href="/#projects">
-                        پروژه‌ها
-                    </a>
-
-                    <a href="/#blog">
-                        وبلاگ
-                    </a>
-
-                    <a href="/#contact">
-                        تماس
-                    </a>
-
-                    <div class="nav-login">
-
-                        <a href="{% url 'login' %}">
-                            ورود
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <!-- Main Content -->
-    <main>
-
-        {% block content %}
-        {% endblock %}
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <div class="container">
-
-            <div class="footer-content">
-
-                <p>
-                    © 2026 Nebula Portfolio
-                </p>
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-    <!-- JavaScript -->
-    <script
-            src="{% static 'js/Rapp.js' %}">
-    </script>
-
-    {% block extra_js %}
+<main>
+    {% block content %}
     {% endblock %}
+</main>
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <div class="footer-left">
+
+            <a href="#home"
+               class="logo">
+
+                <span>N</span>ebula
+
+            </a>
+
+            <p>
+
+                طراحی شده برای تبدیل شدن به
+                یک رزومه و وبلاگ شخصی حرفه‌ای
+                با Django.
+
+            </p>
+            <div class="footer-right">
+
+    {% for sociallink in sociallinks %}
+
+        <a href="{{ sociallink.url }}" target="_blank">
+            <i class="{{ sociallink.icon }}"></i>
+        </a>
+
+    {% endfor %}
+
+</div>
+        </div>
+
+        <ul class="footer-center">
+
+            <li><a href="{% url 'website:home' %}">خانه</a></li>
+
+            <li><a href="{% url 'website:home' %}#about">درباره من</a></li>
+
+            <li><a href="{% url 'website:home' %}#skills">مهارت‌ها</a></li>
+
+            <li><a href="{% url 'website:home' %}#projects">پروژه‌ها</a></li>
+
+            <li><a href="{% url 'website:home' %}#blog">وبلاگ</a></li>
+
+            <li><a href="{% url 'website:home' %}#contact">ارتباط</a></li>
+
+            <li class="nav-login">
+                <a href="{% url 'login:login' %}">ورود</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</footer>
+
+<script src="{% static 'js/Rapp.js' %}"></script>
 
 </body>
 
 </html>
-```
+
