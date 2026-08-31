@@ -652,22 +652,17 @@ PROJECTS
 
 }
 
-.project-image{
+.project-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
 
-    height:220px;
-
-    position:relative;
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #20143f,
-
-    #101018);
-
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-overlay{

@@ -20,20 +20,24 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     # image
 
+
 class Headline(models.Model):
     text = models.CharField(max_length=200)
     order = models.IntegerField(default=0)
+
 
 class Stat(models.Model):
     value = models.CharField(max_length=20)
     label = models.CharField(max_length=100)
     order = models.PositiveIntegerField(default=0)
 
+
 class AboutCard(models.Model):
     icon = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     description = models.TextField()
     order = models.PositiveIntegerField(default=0)
+
 
 class Skill(models.Model):
     name = models.CharField(max_length=100)
@@ -44,12 +48,19 @@ class Skill(models.Model):
         ]
     )
 
+
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='images/', default='images/default_image.jpg')
+
+    image = models.ImageField(
+        upload_to='images/',
+        default='images/default_image.jpg'
+    )
+
     tag = models.CharField(max_length=100)
     url = models.URLField()
+
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)
@@ -67,9 +78,9 @@ class BlogPost(models.Model):
         auto_now_add=True
     )
 
-
     def __str__(self):
         return self.title
+
 
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
@@ -77,6 +88,7 @@ class ContactMessage(models.Model):
     subject = models.CharField(max_length=100)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
 
 class SocialLink(models.Model):
     # platform = models.CharField(max_length=100)
