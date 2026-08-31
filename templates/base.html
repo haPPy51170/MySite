@@ -10,8 +10,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>MyWeb | Profile</title>
-
+    <title>{% block title %}MyWeb | Profile{% endblock %}</title>
     <meta name="description"
           content="Nebula Portfolio">
 
@@ -62,8 +61,7 @@
 
     <div class="container">
 
-        <a href="#home"
-           class="logo">
+        <a href="{% url 'website:home' %}" class="logo">
 
             <span>N</span>ebula
 
@@ -71,19 +69,24 @@
 
         <nav class="navbar">
             <ul>
-
-                <a href="{% url 'website:home' %}">خانه</a>
-
-                <a href="{% url 'website:home' %}#about">درباره من</a>
-
-                <a href="{% url 'website:home' %}#skills">مهارت‌ها</a>
-
-                <a href="{% url 'website:home' %}#projects">پروژه‌ها</a>
-
-                <a href="{% url 'website:home' %}#blog">وبلاگ</a>
-
-                <a href="{% url 'website:home' %}#contact">ارتباط</a>
-
+                <li>
+                    <a href="{% url 'website:home' %}">خانه</a>
+                </li>
+                <li>
+                    <a href="{% url 'website:home' %}#about">درباره من</a>
+                </li>
+                <li>
+                    <a href="{% url 'website:home' %}#skills">مهارت‌ها</a>
+                </li>
+                <li>
+                    <a href="{% url 'website:home' %}#projects">پروژه‌ها</a>
+                </li>
+                <li>
+                    <a href="{% url 'website:home' %}#blog">وبلاگ</a>
+                </li>
+                <li>
+                    <a href="{% url 'website:home' %}#contact">ارتباط</a>
+                </li>
                 <li class="nav-login">
                     <a href="{% url 'login:login' %}">ورود</a>
                 </li>
@@ -130,15 +133,15 @@
             </p>
             <div class="footer-right">
 
-    {% for sociallink in sociallinks %}
+                {% for sociallink in sociallinks %}
 
-        <a href="{{ sociallink.url }}" target="_blank">
-            <i class="{{ sociallink.icon }}"></i>
-        </a>
+                <a href="{{ sociallink.url }}" target="_blank">
+                    <i class="{{ sociallink.icon }}"></i>
+                </a>
 
-    {% endfor %}
+                {% endfor %}
 
-</div>
+            </div>
         </div>
 
         <ul class="footer-center">

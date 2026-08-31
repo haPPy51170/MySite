@@ -37,7 +37,6 @@ def home_view(request):
         "skills": skills,
         "projects": projects,
         "blogposts": blogposts,
-        "sociallinks": sociallinks,
         "form": form,
     }
 
