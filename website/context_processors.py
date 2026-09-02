@@ -1,7 +1,8 @@
-from .models import SocialLink
+from .models import Profile, SocialLink
 
 
-def social_links(request):
+def global_data(request):
     return {
-        "sociallinks": SocialLink.objects.all()
+        "profile": Profile.objects.first(),
+        "sociallink": SocialLink.objects.all(),
     }

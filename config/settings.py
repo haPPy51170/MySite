@@ -72,7 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
-                'website.context_processors.social_links',
+                'website.context_processors.global_data',
             ],
         },
     },

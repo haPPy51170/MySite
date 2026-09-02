@@ -7,6 +7,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 class Profile(models.Model):
     name_fa = models.CharField(max_length=50)
     name_en = models.CharField(max_length=50)
+    name_en_highlight = models.CharField(max_length=50)
     bio_fa = models.TextField()
     bio_en = models.TextField()
     status_fa = models.CharField(max_length=100, blank=True)

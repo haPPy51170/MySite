@@ -12,7 +12,7 @@
 
     <title>{% block title %}MyWeb | Profile{% endblock %}</title>
     <meta name="description"
-          content="Nebula Portfolio">
+          content="HappyCode Portfolio">
 
     <meta name="theme-color"
           content="#0f0b1d">
@@ -60,13 +60,12 @@
 <header class="header">
 
     <div class="container">
+            <a href="{% url 'website:home' %}" class="logo">
 
-        <a href="{% url 'website:home' %}" class="logo">
+                {{ profile.name_en }}
+                <span>{{ profile.name_en_highlight }}</span>
 
-            <span>N</span>ebula
-
-        </a>
-
+            </a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -120,7 +119,8 @@
             <a href="#home"
                class="logo">
 
-                <span>N</span>ebula
+                    {{ profile.name_en }}
+                    <span>{{ profile.name_en_highlight }}</span>
 
             </a>
 

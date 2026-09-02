@@ -19,6 +19,7 @@ class ProfileAdmin(admin.ModelAdmin):
         "id",
         "name_fa",
         "name_en",
+        "name_en_highlight",
         "short_bio_fa",
         "short_bio_en",
         "status_fa",

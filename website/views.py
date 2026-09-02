@@ -24,13 +24,11 @@ def home_view(request):
     )
     about_cards = AboutCard.objects.all().order_by("order")
     stats = Stat.objects.all().order_by("order")
-    skills = Skill.objects.all()
-    projects = Project.objects.all()
-    blogposts = BlogPost.objects.all()
-    sociallinks = SocialLink.objects.all()
+    skills = Skill.objects.all().order_by("id")
+    projects = Project.objects.all().order_by("id")
+    blogposts = BlogPost.objects.all().order_by("-published_at")
 
     context = {
-        "profile": profile,
         "headlines": headlines,
         "stats": stats,
         "about_cards": about_cards,
