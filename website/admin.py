@@ -5,15 +5,22 @@ from website.models import *
 
 class ProfileAdmin(admin.ModelAdmin):
 
+
     def short_bio_fa(self, obj):
         return obj.bio_fa[:20] + "..."
 
-    short_bio_fa.short_description = "خلاصه بیو فارسی"
+    short_bio_fa.short_description = "Summary of Bio fa"
 
     def short_bio_en(self, obj):
         return obj.bio_en[:20] + "..."
 
-    short_bio_en.short_description = "خلاصه بیو انگلیسی"
+    short_bio_en.short_description = "Summary of Bio en"
+
+    def short_bio_login(self, obj):
+        return obj.bio_en[:20] + "..."
+
+    short_bio_login.short_description = "Summary of Bio login"
+
 
     list_display = (
         "id",
@@ -22,6 +29,7 @@ class ProfileAdmin(admin.ModelAdmin):
         "name_en_highlight",
         "short_bio_fa",
         "short_bio_en",
+        "short_bio_login",
         "status_fa",
         "status_en",
         "email",

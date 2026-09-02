@@ -10,6 +10,7 @@ class Profile(models.Model):
     name_en_highlight = models.CharField(max_length=50)
     bio_fa = models.TextField()
     bio_en = models.TextField()
+    bio_login = models.TextField()
     status_fa = models.CharField(max_length=100, blank=True)
     status_en = models.CharField(max_length=100, blank=True)
     email = models.EmailField()

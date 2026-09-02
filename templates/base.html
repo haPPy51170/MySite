@@ -10,7 +10,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>{% block title %}MyWeb | Profile{% endblock %}</title>
+    <title>
+        {% block title %}MyWeb | Profile{% endblock %}
+    </title>
     <meta name="description"
           content="HappyCode Portfolio">
 
@@ -62,8 +64,8 @@
     <div class="container">
             <a href="{% url 'website:home' %}" class="logo">
 
-                {{ profile.name_en }}
-                <span>{{ profile.name_en_highlight }}</span>
+                {{ profile.name_en|slice:":5" }}
+                <span>{{ profile.name_en|slice:"5:" }}</span>
 
             </a>
         <nav class="navbar">
@@ -119,8 +121,8 @@
             <a href="#home"
                class="logo">
 
-                    {{ profile.name_en }}
-                    <span>{{ profile.name_en_highlight }}</span>
+                    {{ profile.name_en|slice:":5" }}
+                    <span>{{ profile.name_en|slice:"5:" }}</span>
 
             </a>
 
@@ -133,7 +135,7 @@
             </p>
             <div class="footer-right">
 
-                {% for sociallink in sociallinks %}
+                {% for sociallink in sociallink %}
 
                 <a href="{{ sociallink.url }}" target="_blank">
                     <i class="{{ sociallink.icon }}"></i>
