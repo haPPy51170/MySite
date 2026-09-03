@@ -9,33 +9,33 @@ class ProfileAdmin(admin.ModelAdmin):
     def short_bio_fa(self, obj):
         return obj.bio_fa[:20] + "..."
 
-    short_bio_fa.short_description = "Summary of Bio fa"
+    short_bio_fa.short_description = "bio_fa"
 
-    def short_bio_en(self, obj):
-        return obj.bio_en[:20] + "..."
-
-    short_bio_en.short_description = "Summary of Bio en"
+    # def short_bio_en(self, obj):
+    #     return obj.bio_en[:20] + "..."
+    #
+    # short_bio_en.short_description = "bio_en"
 
     def short_bio_login(self, obj):
-        return obj.bio_en[:20] + "..."
+        return obj.bio_login[:20] + "..."
 
-    short_bio_login.short_description = "Summary of Bio login"
+    short_bio_login.short_description = "bio_login"
 
 
     list_display = (
         "id",
         "name_fa",
         "name_en",
-        "name_en_highlight",
         "short_bio_fa",
-        "short_bio_en",
+        # "short_bio_en",
         "short_bio_login",
         "status_fa",
-        "status_en",
+        "status_login",
+        # "status_en",
         "email",
         "github",
         "linkedin",
-        "location",
+        # "location",
         "created_at",
         "updated_at",
     )
@@ -44,13 +44,13 @@ class ProfileAdmin(admin.ModelAdmin):
         "name_fa",
         "name_en",
         "bio_fa",
-        "bio_en",
+        # "bio_en",
         "email",
-        "location",
+        # "location",
     )
 
     list_filter = (
-        "location",
+        # "location",
     )
 
     ordering = (

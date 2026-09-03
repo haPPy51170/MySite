@@ -61,10 +61,34 @@ RESPONSIVE
     align-items:flex-start;
 
 }
+
     .navbar{
 
         display:none;
+        position:absolute;
+        top:82px;
+        right:0;
+        width:100%;
+        background:rgba(9,9,11,.95);
+        backdrop-filter:blur(18px);
+        border-top:1px solid var(--border);
+        padding:25px;
 
+    }
+
+    .navbar.active{
+        display:block;
+    }
+
+    .navbar ul{
+    flex-direction:column;
+    align-items:stretch;
+    gap:18px;
+}
+
+    .navbar a{
+        display:block;
+        padding:10px 0;
     }
 
     .menu-btn{

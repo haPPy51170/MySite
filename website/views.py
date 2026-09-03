@@ -16,7 +16,6 @@ def home_view(request):
     else:
         form = ContactForm()
 
-    profile = Profile.objects.first()
     headlines = list(
         Headline.objects
         .order_by("order")
