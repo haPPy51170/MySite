@@ -292,30 +292,90 @@
         </div>
 
 
-        <div class="blog-filters" style="display: flex; justify-content: center; gap: 12px; margin-bottom: 45px; flex-wrap: wrap;">
+       <!-- منوی کشویی مدرن و شیشه‌ای (Custom Glass Dropdown) -->
+        <div class="blog-filters" style="display: flex; justify-content: center; margin-bottom: 45px;">
+            <form method="GET" action="{% url 'website:home' %}#blog" style="width: 100%; max-width: 320px;">
+                <div style="position: relative; width: 100%;">
 
+                    <select name="category"
+                            onchange="this.form.submit()"
+                            style="width: 100%;
+                                   padding: 15px 22px;
+                                   padding-left: 45px;
+                                   border-radius: 50px;
+                                   background: rgba(255, 255, 255, 0.04);
+                                   border: 1px solid rgba(255, 255, 255, 0.08);
+                                   color: var(--text);
+                                   font-family: inherit;
+                                   font-size: 0.95rem;
+                                   font-weight: 500;
+                                   outline: none;
+                                   cursor: pointer;
+                                   appearance: none;
+                                   -webkit-appearance: none;
+                                   -moz-appearance: none;
+                                   transition: var(--transition);
+                                   backdrop-filter: blur(16px);
+                                   box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
 
-            <a href="{% url 'website:home' %}#blog"
-               style="padding: 10px 22px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; {% if not selected_category_slug %}background: var(--primary); color: #fff; box-shadow: 0 0 20px rgba(139,92,246,0.3);{% else %}background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: var(--muted);{% endif %}">
-                همه
-            </a>
+                        <option value="" style="background: #101018; color: var(--text); padding: 12px;">همه دسته‌ها</option>
 
+                        {% for cat in categories %}
+                        <option value="{{ cat.slug }}" {% if selected_category_slug == cat.slug %}selected{% endif %} style="background: #101018; color: var(--text); padding: 12px;">
+                            {{ cat.title }}
+                        </option>
+                        {% endfor %}
 
-            {% for cat in categories %}
-            <a href="{% url 'website:home' %}?category={{ cat.slug }}#blog"
-               style="padding: 10px 22px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; {% if selected_category_slug == cat.slug %}background: var(--primary); color: #fff; box-shadow: 0 0 20px rgba(139,92,246,0.3);{% else %}background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: var(--muted);{% endif %}">
-                {{ cat.title }}
-            </a>
-            {% endfor %}
+                    </select>
 
+                    <!-- آیکون فلش مدرن -->
+                    <i class="fa-solid fa-chevron-down" style="position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; font-size: 0.8rem; transition: var(--transition);"></i>
+
+                </div>
+            </form>
         </div>
+
 
 
         <div class="blog-grid">
 
             {% for blogpost in blogposts %}
 
+            <a href="{% url 'website:blog_detail_by_slug' slug=blogpost.slug %}"
+               class="blog-card">
+
+                {% if blogpost.category %}
+                <span class="blog-category-tag" style="display: inline-block; padding: 4px 12px; margin-bottom: 12px; border-radius: 50px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); color: var(--primary-light); font-size: 0.75rem; font-weight: 600;">
+                    {{ blogpost.category.title }}
+                </span>
+                {% endif %}
+
+                <span class="blog-date">
+
+                    {{ blogpost.published_at|jformat:"%Y/%m/%d" }}
+
+                </span>
+
+                <h3>
+
+                    {{ blogpost.title }}
+
+                </h3>
+
+                <p>
+
+                    {{ blogpost.description }}
+
+                </p>
+
+            </a>
+
+            {% empty %}
+
+            <p>هنوز پستی در این دسته‌بندی منتشر نشده است.</p>
+
             {% endfor %}
+
         </div>
 
     </div>
