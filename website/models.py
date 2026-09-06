@@ -63,6 +63,14 @@ class Project(models.Model):
     tag = models.CharField(max_length=100)
     url = models.URLField()
 
+class Category(models.Model):
+
+    title = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True, allow_unicode=True)
+
+    def __str__(self):
+        return self.title
+
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)
@@ -71,6 +79,14 @@ class BlogPost(models.Model):
         max_length=220,
         unique=True,
         allow_unicode=True
+    )
+
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='posts'
     )
 
     description = models.TextField()

@@ -11,6 +11,12 @@
 
         <header class="blog-post-header">
 
+            {% if blogpost.category %}
+            <span class="blog-category-tag" style="display: inline-block; padding: 6px 14px; margin-bottom: 15px; border-radius: 50px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); color: var(--primary-light); font-size: 0.85rem; font-weight: 600;">
+                {{ blogpost.category.title }}
+            </span>
+            {% endif %}
+
             <span class="blog-post-date">
                 {{ blogpost.published_at|jformat:"%Y/%m/%d" }}
             </span>

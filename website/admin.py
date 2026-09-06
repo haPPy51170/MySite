@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from website.models import *
 
 
@@ -171,11 +170,18 @@ class ProjectAdmin(admin.ModelAdmin):
     )
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("id", "title", "slug")
+    search_fields = ("title", "slug")
+    prepopulated_fields = {"slug": ("title",)}
+
+
 class BlogPostAdmin(admin.ModelAdmin):
 
     list_display = (
         "id",
         "title",
+        "category",
         "description",
         "published_at",
     )
@@ -183,6 +189,10 @@ class BlogPostAdmin(admin.ModelAdmin):
     search_fields = (
         "title",
         "description",
+    )
+
+    list_filter = (
+        "category",
     )
 
     ordering = (
@@ -235,6 +245,7 @@ admin.site.register(Headline, HeadlineAdmin)
 admin.site.register(AboutCard, AboutCardAdmin)
 admin.site.register(Skill, SkillAdmin)
 admin.site.register(Project, ProjectAdmin)
+admin.site.register(Category)
 admin.site.register(BlogPost, BlogPostAdmin)
 admin.site.register(ContactMessage, ContactMessageAdmin)
 admin.site.register(SocialLink, SocialLinkAdmin)

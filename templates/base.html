@@ -118,7 +118,7 @@
 
         <div class="footer-left">
 
-            <a href="#home"
+            <a href="{% url 'website:home' %}"
                class="logo">
 
                     {{ profile.name_en|slice:":5" }}
@@ -135,7 +135,7 @@
             </p>
             <div class="footer-right">
 
-                {% for sociallink in sociallink %}
+                {% for sociallink in sociallinks %}
 
                 <a href="{{ sociallink.url }}" target="_blank">
                     <i class="{{ sociallink.icon }}"></i>
