@@ -292,48 +292,56 @@
         </div>
 
 
-       <!-- منوی کشویی مدرن و شیشه‌ای (Custom Glass Dropdown) -->
-        <div class="blog-filters" style="display: flex; justify-content: center; margin-bottom: 45px;">
-            <form method="GET" action="{% url 'website:home' %}#blog" style="width: 100%; max-width: 320px;">
-                <div style="position: relative; width: 100%;">
+        <div class="blog-filters">
+    <form method="GET" action="{% url 'website:home' %}#blog" class="blog-filter-form">
+        <div class="custom-select" data-select>
 
-                    <select name="category"
-                            onchange="this.form.submit()"
-                            style="width: 100%;
-                                   padding: 15px 22px;
-                                   padding-left: 45px;
-                                   border-radius: 50px;
-                                   background: rgba(255, 255, 255, 0.04);
-                                   border: 1px solid rgba(255, 255, 255, 0.08);
-                                   color: var(--text);
-                                   font-family: inherit;
-                                   font-size: 0.95rem;
-                                   font-weight: 500;
-                                   outline: none;
-                                   cursor: pointer;
-                                   appearance: none;
-                                   -webkit-appearance: none;
-                                   -moz-appearance: none;
-                                   transition: var(--transition);
-                                   backdrop-filter: blur(16px);
-                                   box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <button type="button"
+                    class="custom-select-trigger"
+                    aria-haspopup="listbox"
+                    aria-expanded="false">
 
-                        <option value="" style="background: #101018; color: var(--text); padding: 12px;">همه دسته‌ها</option>
-
+                <span class="custom-select-value">
+                    {% if selected_category_slug %}
                         {% for cat in categories %}
-                        <option value="{{ cat.slug }}" {% if selected_category_slug == cat.slug %}selected{% endif %} style="background: #101018; color: var(--text); padding: 12px;">
-                            {{ cat.title }}
-                        </option>
+                            {% if selected_category_slug == cat.slug %}
+                                {{ cat.title }}
+                            {% endif %}
                         {% endfor %}
+                    {% else %}
+                        همه دسته‌ها
+                    {% endif %}
+                </span>
 
-                    </select>
+                <i class="fa-solid fa-chevron-down custom-select-arrow"></i>
+            </button>
 
-                    <!-- آیکون فلش مدرن -->
-                    <i class="fa-solid fa-chevron-down" style="position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; font-size: 0.8rem; transition: var(--transition);"></i>
+            <div class="custom-select-menu" role="listbox">
 
-                </div>
-            </form>
+                <button type="submit"
+                        name="category"
+                        value=""
+                        class="custom-select-option{% if not selected_category_slug %} selected{% endif %}"
+                        role="option"
+                        aria-selected="{% if not selected_category_slug %}true{% else %}false{% endif %}">
+                    همه دسته‌ها
+                </button>
+
+                {% for cat in categories %}
+                    <button type="submit"
+                            name="category"
+                            value="{{ cat.slug }}"
+                            class="custom-select-option{% if selected_category_slug == cat.slug %} selected{% endif %}"
+                            role="option"
+                            aria-selected="{% if selected_category_slug == cat.slug %}true{% else %}false{% endif %}">
+                        {{ cat.title }}
+                    </button>
+                {% endfor %}
+
+            </div>
         </div>
+    </form>
+</div>
 
 
 

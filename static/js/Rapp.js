@@ -272,3 +272,38 @@ document.addEventListener("mousemove", e => {
 
 });
 
+/* =========================
+   BLOG CATEGORY DROPDOWN
+   ========================= */
+
+const customSelect = document.querySelector("[data-select]");
+
+if (customSelect) {
+    const trigger = customSelect.querySelector(".custom-select-trigger");
+
+    const closeSelect = () => {
+        customSelect.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+    };
+
+    trigger.addEventListener("click", () => {
+        const isOpen = customSelect.classList.toggle("open");
+
+        trigger.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!customSelect.contains(event.target)) {
+            closeSelect();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeSelect();
+        }
+    });
+}
