@@ -168,6 +168,11 @@ HERO STATS
 }
 
 .stat-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+    box-shadow:
+        0 10px 35px rgba(139,108,247,.25);
+}
 
 .stat-card h3{
 
