@@ -54,7 +54,7 @@ NAVBAR
 
 }
 
-.nav-login a{
+.navbar .nav-login a{
 
     background:linear-gradient(135deg,var(--primary),var(--primary-light));
 
@@ -64,7 +64,7 @@ NAVBAR
 
 }
 
-.nav-login a:hover{
+.navbar .nav-login a:hover{
 
     filter:brightness(1.1);
 

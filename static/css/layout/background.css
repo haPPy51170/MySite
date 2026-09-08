@@ -13,8 +13,8 @@ BACKGROUND
     overflow:hidden;
 
     background:
-    radial-gradient(circle at top,#191327 0%,transparent 45%),
-    radial-gradient(circle at bottom,#2d2206 0%,transparent 40%),
+    radial-gradient(circle at top,rgba(139,108,247,.16) 0%,transparent 45%),
+    radial-gradient(circle at bottom,rgba(55,224,212,.09) 0%,transparent 40%),
     var(--bg);
 
 }
@@ -70,22 +70,26 @@ BACKGROUND
 
 .aurora-1{
 
-    background:#7c3aed;
+    background:var(--primary);
 
     top:-260px;
 
     right:-180px;
 
+    opacity:.55;
+
 }
 
 .aurora-2{
 
-    background:#facc15;
+    background:var(--accent);
 
     left:-220px;
 
     bottom:-260px;
 
     animation-delay:6s;
+
+    opacity:.4;
 
 }

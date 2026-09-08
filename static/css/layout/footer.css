@@ -4,11 +4,13 @@ FOOTER
 
 .footer{
 
-    margin:120px 16px 16px;
+    width:min(92%,var(--container));
+
+    margin:120px auto 20px;
 
     padding:60px 0 35px;
 
-    border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+    border-radius:var(--radius-lg);
 
     background:rgba(15,15,24,.55);
 

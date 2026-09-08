@@ -221,7 +221,8 @@ LOGIN OPTIONS
 }
 
 .navbar .nav-login{
-    margin-right: 28px;
+    margin-right: 6px;
+    margin-left: -14px;
 }
 
 .navbar .nav-login a{
