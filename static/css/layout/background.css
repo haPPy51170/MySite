@@ -33,22 +33,13 @@ BACKGROUND
 
     background-size:45px 45px;
 
-    opacity:.18;
+    opacity:.12;
 
 }
 
 .noise{
 
-    position:absolute;
-
-    inset:0;
-
-    opacity:.04;
-
-    background-image:
-    radial-gradient(#ffffff 1px,transparent 1px);
-
-    background-size:12px 12px;
+    display:none;
 
 }
 

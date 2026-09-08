@@ -60,12 +60,10 @@ LOGIN PAGE
 
     border-radius:var(--radius);
 
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(22px);
-
-    border:1px solid rgba(255,255,255,.08);
-
+    background:var(--surface);
+    backdrop-filter:blur(var(--blur));
+    -webkit-backdrop-filter:blur(var(--blur));
+    border:1px solid var(--glass-border);
     box-shadow:var(--shadow);
 
 }

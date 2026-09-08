@@ -1,6 +1,6 @@
 .blog-detail-page {
     width: 100%;
-    padding: 100px 20px;
+    padding: 20px 20px 60px;
     box-sizing: border-box;
 }
 
@@ -15,14 +15,11 @@
 
     box-sizing: border-box;
 
-    border-radius: 24px;
-
-    background: rgba(255,255,255,.04);
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
 
     transition: .35s;
 
