@@ -215,25 +215,27 @@ window.addEventListener("scroll", () => {
 
     let current = "";
 
-    sections.forEach(section => {
+sections.forEach(section => {
 
-        const top = section.offsetTop - 120;
+    const top = section.offsetTop - 140;
 
-        const height = section.offsetHeight;
+    if (window.scrollY >= top) {
 
-        if (window.scrollY >= top) {
+        current = section.getAttribute("id");
 
-            current = section.getAttribute("id");
+    }
 
-        }
-
-    });
+});
 
     navLinks.forEach(link => {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        const href = link.getAttribute("href");
+
+        if (
+            href.endsWith(`#${current}`)
+        ) {
 
             link.classList.add("active");
 
@@ -256,19 +258,33 @@ document.addEventListener("mousemove", e => {
     const x = (e.clientX / window.innerWidth - 0.5) * 20;
     const y = (e.clientY / window.innerHeight - 0.5) * 20;
 
-    if (orb1) {
+if (orb1) {
 
-        orb1.style.transform =
-            `translate(${x}px,${y}px)`;
+    orb1.style.setProperty(
+        "--mouse-x",
+        `${x}px`
+    );
 
-    }
+    orb1.style.setProperty(
+        "--mouse-y",
+        `${y}px`
+    );
 
-    if (orb2) {
+}
 
-        orb2.style.transform =
-            `translate(${-x}px,${-y}px)`;
+if (orb2) {
 
-    }
+    orb2.style.setProperty(
+        "--mouse-x",
+        `${-x}px`
+    );
+
+    orb2.style.setProperty(
+        "--mouse-y",
+        `${-y}px`
+    );
+
+}
 
 });
 

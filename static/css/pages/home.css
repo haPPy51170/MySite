@@ -169,16 +169,6 @@ HERO STATS
 
 .stat-card:hover{
 
-    transform:translateY(-8px);
-
-    border-color:var(--primary);
-
-    box-shadow:
-
-    0 10px 35px rgba(139,108,247,.25);
-
-}
-
 .stat-card h3{
 
     color:var(--secondary);
@@ -221,6 +211,9 @@ HERO RIGHT
 
     filter:blur(90px);
 
+    --mouse-x:0px;
+    --mouse-y:0px;
+
 }
 
 .orb-1{
@@ -234,6 +227,9 @@ HERO RIGHT
     opacity:.35;
 
     animation:orb1 10s ease-in-out infinite;
+
+    margin-left:var(--mouse-x);
+    margin-top:var(--mouse-y);
 
 }
 
@@ -252,6 +248,9 @@ HERO RIGHT
     left:40px;
 
     animation:orb2 12s ease-in-out infinite;
+
+    margin-left:var(--mouse-x);
+    margin-top:var(--mouse-y);
 
 }
 
@@ -457,18 +456,18 @@ ABOUT
     backdrop-filter:blur(var(--blur));
     -webkit-backdrop-filter:blur(var(--blur));
     transition:var(--transition);
-
+    border-radius:var(--radius);
 }
 
 .about-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-6px);
 
     border-color:var(--primary);
 
     box-shadow:
 
-    0 20px 45px rgba(139,108,247,.18);
+    0 16px 40px rgba(139,108,247,.18);
 
 }
 
@@ -553,9 +552,13 @@ SKILLS
 
 .skill-box:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
     border-color:var(--primary);
+
+    box-shadow:
+
+    0 14px 35px rgba(139,108,247,.16);
 
 }
 
@@ -628,13 +631,13 @@ PROJECTS
 
 .project-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-6px);
 
     border-color:var(--primary);
 
     box-shadow:
 
-    0 18px 45px rgba(139,108,247,.20);
+    0 16px 40px rgba(139,108,247,.18);
 
 }
 

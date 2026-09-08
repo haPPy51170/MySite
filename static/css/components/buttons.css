@@ -43,16 +43,24 @@ BUTTONS
 
 .btn-secondary{
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--glass-border);
 
-    color:#fff;
+    color:var(--text);
+
+    background:var(--surface);
 
 }
 
 .btn-secondary:hover{
 
-    border-color:var(--secondary);
+    transform:translateY(-4px);
 
-    color:var(--secondary);
+    border-color:var(--accent);
+
+    color:var(--accent-light);
+
+    background:rgba(55,224,212,.08);
+
+    box-shadow:0 10px 30px rgba(55,224,212,.14);
 
 }
