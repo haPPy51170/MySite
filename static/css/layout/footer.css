@@ -4,13 +4,48 @@ FOOTER
 
 .footer{
 
-    padding:80px 0 35px;
+    margin:120px 16px 16px;
 
-    margin-top:120px;
+    padding:60px 0 35px;
 
-    border-top:1px solid rgba(255,255,255,.08);
+    border-radius:var(--radius-lg) var(--radius-lg) 0 0;
 
-    background:rgba(255,255,255,.02);
+    background:rgba(15,15,24,.55);
+
+    backdrop-filter:blur(var(--blur)) saturate(150%);
+
+    -webkit-backdrop-filter:blur(var(--blur)) saturate(150%);
+
+    border:1px solid var(--glass-border);
+
+    border-bottom:none;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    right:20%;
+
+    left:20%;
+
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--glass-highlight) 50%,
+        transparent
+    );
 
 }
 
@@ -40,7 +75,7 @@ FOOTER
 
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:12px;
 
 }
 
@@ -58,7 +93,7 @@ FOOTER
 
     padding-top:24px;
 
-    border-top:1px solid rgba(255,255,255,.08);
+    border-top:1px solid var(--border);
 
 }
 
@@ -66,15 +101,17 @@ FOOTER
 
     color:var(--muted);
 
-    transition:.3s;
+    transition:var(--transition);
+
+    width:fit-content;
 
 }
 
 .footer-center a:hover{
 
-    color:var(--secondary);
+    color:var(--accent-light);
 
-    transform:translateX(-8px);
+    transform:translateX(-6px);
 
 }
 
@@ -82,7 +119,7 @@ FOOTER
 
     display:flex;
 
-    gap:18px;
+    gap:14px;
 
     margin-top:35px;
 
@@ -92,9 +129,9 @@ FOOTER
 
 .footer-right a{
 
-    width:52px;
+    width:48px;
 
-    height:52px;
+    height:48px;
 
     display:grid;
 
@@ -102,26 +139,28 @@ FOOTER
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.05);
+    background:var(--surface);
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--glass-border);
 
-    transition:.35s;
+    color:var(--text);
+
+    transition:var(--transition);
 
 }
 
 .footer-right a:hover{
 
     background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--accent)
+    );
 
-    135deg,
+    color:#0a0a0f;
 
-    var(--primary),
+    transform:translateY(-6px);
 
-    var(--primary-light));
-
-    color:#fff;
-
-    transform:translateY(-8px) rotate(8deg);
+    box-shadow:0 8px 24px var(--primary-glow);
 
 }

@@ -8,7 +8,7 @@ NAVBAR
 
     align-items:center;
 
-    gap:38px;
+    gap:6px;
 
 }
 
@@ -18,43 +18,57 @@ NAVBAR
 
     font-weight:500;
 
+    font-size:.94rem;
+
     position:relative;
 
+    padding:9px 18px;
+
+    border-radius:999px;
+
     transition:var(--transition);
+
+    display:inline-block;
 
 }
 
 .navbar a:hover{
 
-    color:#fff;
+    color:var(--text);
+
+    background:var(--surface-light);
 
 }
 
-.navbar a::after{
+.navbar a.active{
 
-    content:"";
+    color:var(--text);
 
-    position:absolute;
+    background:linear-gradient(
+        135deg,
+        var(--primary-glow),
+        rgba(55,224,212,.18)
+    );
 
-    right:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    border-radius:10px;
-
-    background:var(--secondary);
-
-    transition:.35s;
+    border:1px solid var(--glass-border);
 
 }
 
-.navbar a:hover::after{
+.nav-login a{
 
-    width:100%;
+    background:linear-gradient(135deg,var(--primary),var(--primary-light));
+
+    color:#fff !important;
+
+    box-shadow:0 4px 18px var(--primary-glow);
+
+}
+
+.nav-login a:hover{
+
+    filter:brightness(1.1);
+
+    transform:translateY(-1px);
 
 }
 
@@ -80,7 +94,9 @@ NAVBAR
 
     margin:8px 0;
 
-    background:#fff;
+    border-radius:2px;
+
+    background:var(--text);
 
     transition:.3s;
 

@@ -20,7 +20,7 @@ FORMS & INPUTS
 .input-group input:focus,
 .input-group textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 25px rgba(139, 92, 246, .18);
+    box-shadow: 0 0 25px rgba(139,108,247, .18);
 }
 
 /* Form Errors */

@@ -177,7 +177,7 @@ HERO STATS
 
     box-shadow:
 
-    0 10px 35px rgba(139,92,246,.25);
+    0 10px 35px rgba(139,108,247,.25);
 
 }
 
@@ -283,7 +283,7 @@ HERO RIGHT
 
     box-shadow:
 
-    0 0 80px rgba(139,92,246,.20),
+    0 0 80px rgba(139,108,247,.20),
 
     inset 0 0 20px rgba(255,255,255,.04);
 
@@ -474,7 +474,7 @@ ABOUT
 
     box-shadow:
 
-    0 20px 45px rgba(139,92,246,.18);
+    0 20px 45px rgba(139,108,247,.18);
 
 }
 
@@ -492,7 +492,7 @@ ABOUT
 
     circle,
 
-    rgba(139,92,246,.35),
+    rgba(139,108,247,.35),
 
     transparent 70%);
 
@@ -648,7 +648,7 @@ PROJECTS
 
     box-shadow:
 
-    0 18px 45px rgba(139,92,246,.20);
+    0 18px 45px rgba(139,108,247,.20);
 
 }
 
@@ -783,7 +783,7 @@ BLOG
 
     box-shadow:
 
-    0 18px 40px rgba(139,92,246,.18);
+    0 18px 40px rgba(139,108,247,.18);
 
 }
 
@@ -801,7 +801,7 @@ BLOG
 
     135deg,
 
-    rgba(139,92,246,.08),
+    rgba(139,108,247,.08),
 
     transparent 60%);
 
@@ -946,7 +946,7 @@ CONTACT
 
     box-shadow:
 
-    0 0 25px rgba(139,92,246,.18);
+    0 0 25px rgba(139,108,247,.18);
 
 }
 
@@ -1046,9 +1046,9 @@ REVEAL ANIMATION
 
 .custom-select-trigger:hover,
 .custom-select.open .custom-select-trigger {
-    border-color: rgba(139, 92, 246, 0.45);
-    background: rgba(139, 92, 246, 0.08);
-    box-shadow: 0 10px 35px rgba(139, 92, 246, 0.18);
+    border-color: rgba(139,108,247, 0.45);
+    background: rgba(139,108,247, 0.08);
+    box-shadow: 0 10px 35px rgba(139,108,247, 0.18);
 }
 
 .custom-select-value {
@@ -1088,14 +1088,14 @@ REVEAL ANIMATION
     border-radius: 20px;
 
     background: rgba(16, 16, 24, 0.92);
-    border: 1px solid rgba(139, 92, 246, 0.18);
+    border: 1px solid rgba(139,108,247, 0.18);
 
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
 
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(139, 92, 246, 0.08);
+        0 0 30px rgba(139,108,247, 0.08);
 
     opacity: 0;
     visibility: hidden;
@@ -1149,12 +1149,12 @@ REVEAL ANIMATION
 .custom-select-option:focus {
     outline: none;
 
-    background: rgba(139, 92, 246, 0.12);
+    background: rgba(139,108,247, 0.12);
     color: var(--text);
 }
 
 .custom-select-option.selected {
-    background: rgba(139, 92, 246, 0.18);
+    background: rgba(139,108,247, 0.18);
     color: var(--primary-light);
     font-weight: 700;
 }
@@ -1167,8 +1167,8 @@ REVEAL ANIMATION
 
     border-radius: 50px;
 
-    background: rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    background: rgba(139,108,247, 0.1);
+    border: 1px solid rgba(139,108,247, 0.2);
 
     color: var(--primary-light);
 
