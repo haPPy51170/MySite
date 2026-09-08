@@ -33,11 +33,10 @@ BUTTONS
 
 .btn-primary:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(calc(var(--motion-button) * -1));
 
     box-shadow:
-
-    0 15px 40px rgba(139,108,247,.45);
+        0 15px 40px rgba(139,108,247,.45);
 
 }
 
@@ -53,14 +52,14 @@ BUTTONS
 
 .btn-secondary:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(calc(var(--motion-button) * -1));
 
-    border-color:var(--accent);
+    border-color:var(--primary);
 
-    color:var(--accent-light);
+    color:var(--primary-light);
 
-    background:rgba(55,224,212,.08);
+    background:rgba(139,108,247,.08);
 
-    box-shadow:0 10px 30px rgba(55,224,212,.14);
+    box-shadow:0 10px 30px rgba(139,108,247,.14);
 
 }

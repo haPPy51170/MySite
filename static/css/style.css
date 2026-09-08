@@ -12,7 +12,7 @@ BASE
 @import url("base/scrollbar.css");
 @import url("base/global.css");
 @import url("base/animations.css");
-@import url("base/responsive.css");
+
 
 
 /*==============================
@@ -47,6 +47,11 @@ BLOG_DETAIL
 
 @import url("pages/blog_detail.css");
 
+/*==============================
+RESPONSIVE
+==============================*/
+
+@import url("base/responsive.css");
 
 
 

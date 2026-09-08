@@ -62,7 +62,8 @@
 <header class="header">
 
     <div class="container">
-            <a href="{% url 'website:home' %}" class="logo">
+            <a href="#" class="logo" data-logo>
+
 
                 {{ profile.name_en|slice:":5" }}
                 <span>{{ profile.name_en|slice:"5:" }}</span>
@@ -71,7 +72,7 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a href="{% url 'website:home' %}">خانه</a>
+                    <a href="{% url 'website:home' %}#home">خانه</a>
                 </li>
                 <li>
                     <a href="{% url 'website:home' %}#about">درباره من</a>
@@ -118,8 +119,7 @@
 
         <div class="footer-left">
 
-            <a href="{% url 'website:home' %}"
-               class="logo">
+            <a href="#" class="logo" data-logo>
 
                     {{ profile.name_en|slice:":5" }}
                     <span>{{ profile.name_en|slice:"5:" }}</span>
@@ -148,7 +148,7 @@
 
         <ul class="footer-center">
 
-            <li><a href="{% url 'website:home' %}">خانه</a></li>
+            <li><a href="{% url 'website:home' %}#home">خانه</a></li>
 
             <li><a href="{% url 'website:home' %}#about">درباره من</a></li>
 

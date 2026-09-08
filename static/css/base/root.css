@@ -38,7 +38,17 @@ ROOT
     --radius-lg:38px;
 
     --blur:22px;
+
+    --glass-bg:var(--surface);
+    --glass-border-color:var(--glass-border);
+    --glass-blur:var(--blur);
+    --glass-radius:var(--radius);
+
     --transition:.35s cubic-bezier(.4,0,.2,1);
+
+    --motion-micro:2px;
+    --motion-button:4px;
+    --motion-card:6px;
 
     --container:1240px;
 

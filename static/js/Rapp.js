@@ -179,71 +179,70 @@ if (menuBtn && navbar) {
 }
 
 
-/*==============================
-SMOOTH SCROLL
-==============================*/
+// =========================
+// Smooth Scroll
+// =========================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
+document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
+        const url = new URL(this.href, window.location.href);
 
-        const target = document.querySelector(this.getAttribute("href"));
+        // فقط لینک‌هایی که داخل همین صفحه هستند
+        if (url.pathname !== window.location.pathname || !url.hash) {
+            return;
+        }
 
-        if (!target) return;
+        const target = document.getElementById(url.hash.slice(1));
+
+        if (!target) {
+            return;
+        }
 
         e.preventDefault();
 
         target.scrollIntoView({
-
-            behavior: "smooth"
-
+            behavior: "smooth",
+            block: "start",
         });
 
+        history.replaceState(null, "", url.hash);
     });
-
 });
 
 
-/*==============================
-ACTIVE NAV LINK
-==============================*/
+// =========================
+// Active Navigation
+// =========================
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
+const sections = document.querySelectorAll("main section");
+const navLinks = document.querySelectorAll(".navbar a[href*='#']");
 
-window.addEventListener("scroll", () => {
+function updateActiveNav() {
+    let current = "home";
 
-    let current = "";
+    sections.forEach((section) => {
+        const top = section.offsetTop - 140;
 
-sections.forEach(section => {
-
-    const top = section.offsetTop - 140;
-
-    if (window.scrollY >= top) {
-
-        current = section.getAttribute("id");
-
-    }
-
-});
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        const href = link.getAttribute("href");
-
-        if (
-            href.endsWith(`#${current}`)
-        ) {
-
-            link.classList.add("active");
-
+        if (window.scrollY >= top) {
+            current = section.id;
         }
-
     });
 
-});
+    navLinks.forEach((link) => {
+        const url = new URL(link.href, window.location.href);
+        const targetHash = url.hash;
+
+        link.classList.toggle(
+            "active",
+            targetHash === `#${current}`
+        );
+    });
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNav);
+
+updateActiveNav();
 
 
 /*==============================
@@ -321,5 +320,22 @@ if (customSelect) {
         if (event.key === "Escape") {
             closeSelect();
         }
+    });
+}
+
+// =========================
+// Logo Navigation
+// =========================
+
+const logo = document.querySelector("[data-logo]");
+
+if (logo) {
+    logo.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     });
 }

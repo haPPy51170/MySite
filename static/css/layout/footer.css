@@ -117,9 +117,9 @@ FOOTER
 
 .footer-center a:hover{
 
-    color:var(--accent-light);
+    color:var(--primary-light);
 
-    transform:translateX(-6px);
+    transform:translateX(calc(var(--motion-button) * -1));
 
 }
 
@@ -159,14 +159,14 @@ FOOTER
 
 .footer-right a:hover{
 
-    background:rgba(55,224,212,.10);
+    background:rgba(139,108,247,.08);
 
-    border-color:var(--accent);
+    border-color:var(--primary);
 
-    color:var(--accent-light);
+    color:var(--primary-light);
 
-    transform:translateY(-4px);
+    transform:translateY(calc(var(--motion-button) * -1));
 
-    box-shadow:0 8px 22px rgba(55,224,212,.12);
+    box-shadow:0 8px 22px rgba(139,108,247,.12);
 
 }

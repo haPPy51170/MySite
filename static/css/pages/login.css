@@ -188,7 +188,7 @@ LOGIN OPTIONS
 
     margin:10px auto 0;
 
-    width:90%;
+    width:100%;
 
 }
 
@@ -218,19 +218,4 @@ LOGIN OPTIONS
 
 }
 
-.navbar .nav-login{
-    margin-right: 6px;
-    margin-left: -14px;
-}
 
-.navbar .nav-login a{
-    padding: 10px 22px;
-    border: 1px solid var(--primary);
-    border-radius: 999px;
-    color: #fff;
-    transition: var(--transition);
-}
-
-.navbar .nav-login a:hover{
-    background: var(--primary);
-}

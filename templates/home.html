@@ -65,7 +65,7 @@
 
                 {% for stat in stats %}
 
-                <div class="stat-card">
+                <div class="stat-card glass-card">
 
                     <h3>{{ stat.label }}</h3>
 
@@ -143,9 +143,7 @@
 
             {% for about_card in about_cards %}
 
-            <div class="about-card">
-
-                <div class="card-glow"></div>
+            <div class="about-card glass-card">
 
                 <h3>
 
@@ -188,7 +186,7 @@
 
             {% for skill in skills %}
 
-            <div class="skill-box">
+            <div class="skill-box glass-card">
 
                 <h4>{{ skill.name }}</h4>
 
@@ -225,7 +223,7 @@
 
             {% for project in projects %}
 
-            <article class="project-card">
+            <article class="project-card glass-card">
 
                 <div class="project-image">
 
@@ -350,7 +348,7 @@
             {% for blogpost in blogposts %}
 
             <a href="{% url 'website:blog_detail_by_slug' slug=blogpost.slug %}"
-               class="blog-card">
+               class="blog-card glass-card">
 
                 {% if blogpost.category %}
                 <span class="blog-category-tag">
@@ -409,7 +407,7 @@
 
             <div class="contact-info">
 
-                <div class="info-card">
+                <div class="info-card glass-card">
 
                     <i class="fa-solid fa-envelope"></i>
 
