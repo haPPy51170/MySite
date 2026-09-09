@@ -1,19 +1,8 @@
+```css
 /*==============================
 NAVBAR
 ==============================*/
 
-/*==============================
-NAVBAR CENTER
-==============================*/
-
-.header .navbar{
-
-    position:absolute;
-
-    left:50%;
-    transform:translateX(-50%);
-
-}
 
 .navbar ul{
 
@@ -66,14 +55,13 @@ NAVBAR CENTER
 
 }
 
-.navbar .nav-login{
+.header-login{
 
-    margin-right:6px;
-    margin-left:-14px;
+    justify-self:end;
 
 }
 
-.navbar .nav-login a{
+.header-login a{
 
     padding:10px 22px;
 
@@ -81,7 +69,7 @@ NAVBAR CENTER
 
     border-radius:999px;
 
-    color:#fff !important;
+    color:#fff;
 
     background:rgba(139,108,247,.08);
 
@@ -89,13 +77,13 @@ NAVBAR CENTER
 
 }
 
-.navbar .nav-login a:hover{
+.header-login a:hover{
 
     background:var(--primary);
 
     border-color:var(--primary);
 
-    color:#fff !important;
+    color:#fff;
 
     transform:translateY(calc(var(--motion-micro) * -1));
 
@@ -134,13 +122,20 @@ NAVBAR CENTER
 }
 
 .menu-btn.active span:nth-child(1){
+
     transform:translateY(10px) rotate(45deg);
+
 }
 
 .menu-btn.active span:nth-child(2){
+
     opacity:0;
+
 }
 
 .menu-btn.active span:nth-child(3){
+
     transform:translateY(-10px) rotate(-45deg);
+
 }
+```
