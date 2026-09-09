@@ -1,29 +1,4 @@
 /*==============================
-LOGO
-==============================*/
-
-.logo{
-
-    font-size:1.8rem;
-
-    font-weight:800;
-
-    color:#fff;
-
-    letter-spacing:.5px;
-
-}
-
-.logo span{
-
-    color:var(--secondary);
-
-}
-
-
-
-
-/*==============================
 HERO
 ==============================*/
 
@@ -49,33 +24,6 @@ HERO
 
 }
 
-.hero-badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:10px 18px;
-
-    border-radius:100px;
-
-    background:var(--surface);
-
-    border:1px solid var(--glass-border);
-
-    color:var(--secondary);
-
-    margin-bottom:28px;
-
-}
-
-.hero-badge i{
-
-    font-size:.55rem;
-
-}
 
 .hero h1{
 
@@ -923,17 +871,7 @@ CONTACT
 
 
 
-.input-group input:focus,
 
-.input-group textarea:focus{
-
-    border-color:var(--primary);
-
-    box-shadow:
-
-    0 0 25px rgba(139,108,247,.18);
-
-}
 
 
 /*==============================

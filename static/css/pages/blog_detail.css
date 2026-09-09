@@ -15,12 +15,6 @@
 
     box-sizing: border-box;
 
-    border-radius: var(--radius);
-    background: var(--surface);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(var(--blur));
-    -webkit-backdrop-filter: blur(var(--blur));
-
     transition: .35s;
 
     box-shadow:

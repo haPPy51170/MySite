@@ -2,6 +2,19 @@
 NAVBAR
 ==============================*/
 
+/*==============================
+NAVBAR CENTER
+==============================*/
+
+.header .navbar{
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+}
+
 .navbar ul{
 
     display:flex;

@@ -218,6 +218,17 @@ const sections = document.querySelectorAll("main section");
 const navLinks = document.querySelectorAll(".navbar a[href*='#']");
 
 function updateActiveNav() {
+
+    const isHomePage = window.location.pathname === "/";
+
+    if (!isHomePage) {
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+        });
+
+        return;
+    }
+
     let current = "home";
 
     sections.forEach((section) => {
