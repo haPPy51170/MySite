@@ -6,9 +6,9 @@ FOOTER
 
     width:min(92%,var(--container));
 
-    margin:90px auto 20px;
+    margin:70px auto 20px;
 
-    padding:42px 0 25px;
+    padding:34px 0 22px;
 
     border-radius:var(--radius-lg);
 
@@ -57,7 +57,7 @@ FOOTER
 
     grid-template-columns:1.5fr 1fr;
 
-    gap:45px;
+    gap:40px;
 
     align-items:start;
 
@@ -97,9 +97,9 @@ FOOTER
 
 .footer-auth{
 
-    margin-top:32px;
+    margin-top:22px;
 
-    padding-top:24px;
+    padding-top:18px;
 
     border-top:1px solid var(--border);
 
@@ -137,9 +137,9 @@ FOOTER
 
 .footer-right a{
 
-    width:42px;
+    width:38px;
 
-    height:42px;
+    height:38px;
 
     display:grid;
 
@@ -159,7 +159,7 @@ FOOTER
 
 .footer-right a:hover{
 
-    background:rgba(139,108,247,.08);
+    background:var(--primary-a08);
 
     border-color:var(--primary);
 
@@ -167,6 +167,6 @@ FOOTER
 
     transform:translateY(calc(var(--motion-button) * -1));
 
-    box-shadow:0 8px 22px rgba(139,108,247,.12);
+    box-shadow:0 8px 22px var(--primary-a12);
 
 }

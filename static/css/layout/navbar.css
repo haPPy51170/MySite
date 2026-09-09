@@ -1,8 +1,6 @@
-```css
 /*==============================
 NAVBAR
 ==============================*/
-
 
 .navbar ul{
 
@@ -32,6 +30,8 @@ NAVBAR
 
     display:inline-block;
 
+    white-space:nowrap;
+
 }
 
 .navbar a:hover{
@@ -46,22 +46,19 @@ NAVBAR
 
     color:var(--text);
 
-    background:rgba(139,108,247,.14);
+    background:var(--primary-a12);
 
-    border:1px solid rgba(139,108,247,.35);
+    border:1px solid var(--primary-a35);
 
-    box-shadow:
-        0 8px 24px rgba(139,108,247,.12);
+    box-shadow:0 8px 24px var(--primary-a12);
 
 }
+
+/*==============================
+LOGIN BUTTON (HEADER)
+==============================*/
 
 .header-login{
-
-    justify-self:end;
-
-}
-
-.header-login a{
 
     padding:10px 22px;
 
@@ -71,13 +68,19 @@ NAVBAR
 
     color:#fff;
 
-    background:rgba(139,108,247,.08);
+    background:var(--primary-a08);
+
+    font-weight:600;
+
+    font-size:.94rem;
+
+    white-space:nowrap;
 
     transition:var(--transition);
 
 }
 
-.header-login a:hover{
+.header-login:hover{
 
     background:var(--primary);
 
@@ -85,11 +88,15 @@ NAVBAR
 
     color:#fff;
 
-    transform:translateY(calc(var(--motion-micro) * -1));
+    transform:translateY(-2px);
 
-    box-shadow:0 8px 20px rgba(139,108,247,.20);
+    box-shadow:0 8px 20px var(--primary-glow);
 
 }
+
+/*==============================
+MOBILE MENU BUTTON
+==============================*/
 
 .menu-btn{
 
@@ -117,25 +124,18 @@ NAVBAR
 
     background:var(--text);
 
-    transition:.3s;
+    transition:var(--transition);
 
 }
 
 .menu-btn.active span:nth-child(1){
-
     transform:translateY(10px) rotate(45deg);
-
 }
 
 .menu-btn.active span:nth-child(2){
-
     opacity:0;
-
 }
 
 .menu-btn.active span:nth-child(3){
-
     transform:translateY(-10px) rotate(-45deg);
-
 }
-```

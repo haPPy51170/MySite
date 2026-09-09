@@ -15,6 +15,14 @@ ROOT
     --primary-light:#b39dfb;
     --primary-glow:rgba(139,108,247,.45);
 
+    /* مقیاس شفافیت بنفش - برای هر شدت تعامل یه سطح ثابت */
+    --primary-a08:rgba(139,108,247,.08);
+    --primary-a12:rgba(139,108,247,.12);
+    --primary-a18:rgba(139,108,247,.18);
+    --primary-a25:rgba(139,108,247,.25);
+    --primary-a35:rgba(139,108,247,.35);
+    --primary-a45:rgba(139,108,247,.45);
+
     --accent:#37e0d4;
     --accent-light:#6ff0e6;
 

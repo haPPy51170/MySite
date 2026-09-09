@@ -32,9 +32,11 @@ HEADER
 
     align-items:center;
 
+    gap:24px;
+
     width:min(92%,var(--container));
 
-    padding:0 34px;
+    padding:0 30px;
 
     border-radius:999px;
 
@@ -91,6 +93,26 @@ HEADER
 
 .header .logo{
 
-    letter-spacing:.3px;
+    grid-column:1;
+
+    justify-self:start;
+
+    white-space:nowrap;
+
+}
+
+.header .navbar{
+
+    grid-column:2;
+
+    justify-self:center;
+
+}
+
+.header .header-login{
+
+    grid-column:3;
+
+    justify-self:end;
 
 }

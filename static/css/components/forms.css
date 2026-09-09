@@ -11,8 +11,8 @@ FORMS & INPUTS
     resize: none;
     border-radius: 18px;
     color: var(--text);
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .08);
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
     transition: var(--transition);
     font-family: inherit;
 }
@@ -20,7 +20,7 @@ FORMS & INPUTS
 .input-group input:focus,
 .input-group textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 25px rgba(139,108,247, .18);
+    box-shadow: 0 0 25px var(--primary-a18);
 }
 
 /* Form Errors */

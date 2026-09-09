@@ -13,7 +13,7 @@ BACKGROUND
     overflow:hidden;
 
     background:
-    radial-gradient(circle at top,rgba(139,108,247,.16) 0%,transparent 45%),
+    radial-gradient(circle at top,var(--primary-a18) 0%,transparent 45%),
     radial-gradient(circle at bottom,rgba(55,224,212,.09) 0%,transparent 40%),
     var(--bg);
 

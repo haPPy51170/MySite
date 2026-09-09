@@ -62,13 +62,12 @@
 <header class="header">
 
     <div class="container">
-            <a href="#" class="logo" data-logo>
 
+        <a href="{% url 'website:home' %}" class="logo" data-logo>
+            {{ profile.name_en|slice:":5" }}
+            <span>{{ profile.name_en|slice:"5:" }}</span>
+        </a>
 
-                {{ profile.name_en|slice:":5" }}
-                <span>{{ profile.name_en|slice:"5:" }}</span>
-
-            </a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -89,16 +88,15 @@
                 <li>
                     <a href="{% url 'website:home' %}#contact">ارتباط</a>
                 </li>
-
             </ul>
         </nav>
 
+        <a href="{% url 'login:login' %}" class="header-login">ورود</a>
+
         <button class="menu-btn">
-
             <span></span>
             <span></span>
             <span></span>
-
         </button>
 
     </div>

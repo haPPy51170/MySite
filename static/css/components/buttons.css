@@ -27,7 +27,7 @@ BUTTONS
 
     box-shadow:
 
-    0 0 45px rgba(139,108,247,.35);
+    0 0 45px var(--primary-a35);
 
 }
 
@@ -36,7 +36,7 @@ BUTTONS
     transform:translateY(calc(var(--motion-button) * -1));
 
     box-shadow:
-        0 15px 40px rgba(139,108,247,.45);
+        0 15px 40px var(--primary-a45);
 
 }
 
@@ -58,8 +58,8 @@ BUTTONS
 
     color:var(--primary-light);
 
-    background:rgba(139,108,247,.08);
+    background:var(--primary-a08);
 
-    box-shadow:0 10px 30px rgba(139,108,247,.14);
+    box-shadow:0 10px 30px var(--primary-a12);
 
 }

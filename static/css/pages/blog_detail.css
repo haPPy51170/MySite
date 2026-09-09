@@ -15,10 +15,19 @@
 
     box-sizing: border-box;
 
-    transition: .35s;
+    border-radius: var(--radius);
+
+    background: var(--surface);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+
+    transition: var(--transition);
 
     box-shadow:
-        0 18px 45px rgba(139,108,247,.12);
+        0 18px 45px var(--primary-a12);
 }
 
 .blog-post-card::before {
@@ -31,7 +40,7 @@
     background:
         linear-gradient(
             135deg,
-            rgba(139,108,247,.08),
+            var(--primary-a08),
             transparent 60%
         );
 
@@ -45,7 +54,7 @@
     padding-bottom: 35px;
     margin-bottom: 35px;
 
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid var(--border);
 }
 
 .blog-post-date {
@@ -56,8 +65,8 @@
 
     border-radius: 100px;
 
-    background: rgba(250,204,21,.10);
-    border: 1px solid rgba(250,204,21,.20);
+    background: rgba(234,185,77,.10);
+    border: 1px solid rgba(234,185,77,.20);
 
     color: var(--secondary);
 
