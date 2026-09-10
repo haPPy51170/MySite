@@ -88,7 +88,7 @@ LOGIN BUTTON (HEADER)
 
     color:#fff;
 
-    transform:translateY(-2px);
+    transform:scale(.96);
 
     box-shadow:0 8px 20px var(--primary-glow);
 

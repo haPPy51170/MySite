@@ -12,11 +12,21 @@ BUTTONS
 
     transition:var(--transition);
 
+    outline:none;
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
 }
 
 .btn-primary{
 
     color:#fff;
+
+    border:1px solid var(--primary-light);
 
     background:
 

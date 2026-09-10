@@ -805,6 +805,8 @@ CONTACT
 
     flex-direction:column;
 
+    justify-content:space-between;
+
     gap:22px;
 
 }
@@ -826,6 +828,8 @@ CONTACT
     width:62px;
 
     height:62px;
+
+    flex-shrink:0;
 
     border-radius:50%;
 
@@ -952,7 +956,7 @@ REVEAL ANIMATION
 
     min-height:54px;
 
-    padding:15px 22px 15px 45px;
+    padding:15px 22px;
 
     border-radius:50px;
 
