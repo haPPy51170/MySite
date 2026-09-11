@@ -95,6 +95,28 @@ window.addEventListener("scroll", () => {
 
 
 /*==============================
+BACKGROUND HUE ROTATE ON SCROLL
+==============================*/
+
+const bgLayer = document.querySelector(".background");
+
+window.addEventListener("scroll", () => {
+
+    if (!bgLayer) return;
+
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+
+    const percent = window.scrollY / total;
+
+    // بین 0 تا 110 درجه می‌چرخه؛ همیشه توی خانواده‌ی بنفش-آبی-فیروزه‌ای می‌مونه
+    const hue = percent * 110;
+
+    bgLayer.style.filter = `hue-rotate(${hue}deg)`;
+
+});
+
+
+/*==============================
 HEADER SCROLL
 ==============================*/
 

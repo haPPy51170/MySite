@@ -17,7 +17,7 @@
           content="HappyCode Portfolio">
 
     <meta name="theme-color"
-          content="#0f0b1d">
+          content="#08080c">
 
     <!-- Fonts -->
 
@@ -93,7 +93,7 @@
 
         <a href="{% url 'login:login' %}" class="header-login">ورود</a>
 
-        <button class="menu-btn">
+        <button class="menu-btn" aria-label="باز کردن منو" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -130,7 +130,7 @@
 
                 {% for sociallink in sociallinks %}
 
-                <a href="{{ sociallink.url }}" target="_blank">
+                <a href="{{ sociallink.url }}" target="_blank" aria-label="{{ sociallink.icon|cut:'fa-brands '|cut:'fa-solid '|cut:'fa-' }}">
                     <i class="{{ sociallink.icon }}"></i>
                 </a>
 

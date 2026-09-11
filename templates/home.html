@@ -188,7 +188,7 @@
 
             <div class="skill-box glass-card">
 
-                <h4>{{ skill.name }}</h4>
+                <h3>{{ skill.name }}</h3>
 
                 <div class="skill-bar">
 
@@ -227,7 +227,7 @@
 
                 <div class="project-image">
 
-                        <img src="{{ project.image.url }}">
+                        <img src="{{ project.image.url }}" alt="{{ project.title }}" loading="lazy">
 
                     <div class="project-overlay"></div>
 
@@ -413,7 +413,7 @@
 
                     <div>
 
-                        <h4>ایمیل</h4>
+                        <h3>ایمیل</h3>
 
                         <p>{{ profile.email }}</p>
 
@@ -427,7 +427,7 @@
 
                     <div>
 
-                        <h4>GitHub</h4>
+                        <h3>GitHub</h3>
 
                         <p>{{ profile.github }}</p>
 
@@ -441,7 +441,7 @@
 
                     <div>
 
-                        <h4>LinkedIn</h4>
+                        <h3>LinkedIn</h3>
 
                         <p>{{ profile.linkedin }}</p>
 

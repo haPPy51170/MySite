@@ -12,6 +12,12 @@ BACKGROUND
 
     overflow:hidden;
 
+    transition:transform .4s ease-out;
+
+    will-change:transform;
+
+    transform-origin:center center;
+
     background:
     radial-gradient(circle at top,var(--primary-a18) 0%,transparent 45%),
     radial-gradient(circle at bottom,rgba(55,224,212,.09) 0%,transparent 40%),

@@ -62,40 +62,72 @@ RESPONSIVE
 
 }
 
-    .navbar{
+    .header .container{
 
-        left:0;
-        transform:none;
-        display:none;
-        position:absolute;
-        top:82px;
-        right:0;
-        width:100%;
-        background:rgba(9,9,11,.95);
-        backdrop-filter:blur(18px);
-        border-top:1px solid var(--border);
-        padding:25px;
+        grid-template-columns:1fr auto auto;
 
     }
 
-    .navbar.active{
+    .header .header-login{
+
+        grid-column:2;
+
+    }
+
+    .header .navbar{
+
+        display:none;
+
+    }
+
+    .header .navbar.active{
+
         display:block;
+
+        position:fixed;
+
+        top:100px;
+
+        right:16px;
+
+        left:16px;
+
+        grid-column:auto;
+
+        background:rgba(14,14,22,.92);
+
+        backdrop-filter:blur(22px);
+        -webkit-backdrop-filter:blur(22px);
+
+        border:1px solid var(--glass-border);
+
+        border-radius:var(--radius);
+
+        padding:20px;
+
+        box-shadow:var(--shadow);
+
+        z-index:9998;
+
     }
 
     .navbar ul{
     flex-direction:column;
     align-items:stretch;
-    gap:18px;
+    gap:10px;
 }
 
     .navbar a{
         display:block;
-        padding:10px 0;
+        padding:12px;
+        text-align:center;
     }
 
     .menu-btn{
 
         display:block;
+
+        grid-column:3;
 
     }
 
